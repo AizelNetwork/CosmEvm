@@ -23,7 +23,7 @@ apply the above generated bench32 address for the USER1, USER2, USER3, USER4 in 
 ./prod_node2.sh
 ```
 
-### 3. Back with node2 
+### 3. Start Node 
 #### 3.1 Collect genesis tx 
 
 ```bash
