@@ -31,9 +31,6 @@ parent:
   <a href="https://codecov.io/gh/evmos/evmos">
     <img alt="Code Coverage" src="https://codecov.io/gh/evmos/evmos/branch/main/graph/badge.svg" />
   </a>
-  <a href="https://x.com/CosmEvmOrg">
-    <img alt="Follow CosmEvm on X" src="https://x.com/CosmEvmOrg"/>
-  </a>
 </div>
 
 ## About
