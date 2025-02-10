@@ -1,129 +1,222 @@
-<!--
-parent:
-  order: false
--->
+## 0. Server Environment Setup
 
-<div align="center">
-  <h1> CosmEvm </h1>
-</div>
+### 0.1. Configure Environment Variables
 
-<div align="center">
-  <a href="https://github.com/AizelNetwork/evmos/releases/latest">
-    <img alt="Version" src="https://img.shields.io/github/tag/evmos/evmos.svg" />
-  </a>
-  <a href="https://github.com/AizelNetwork/evmos/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/evmos/evmos.svg" />
-  </a>
-  <a href="https://pkg.go.dev/github.com/AizelNetwork/evmos">
-    <img alt="GoDoc" src="https://godoc.org/github.com/AizelNetwork/evmos?status.svg" />
-  </a>
-  <a href="https://goreportcard.com/report/github.com/AizelNetwork/evmos">
-    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/AizelNetwork/evmos"/>
-  </a>
-</div>
-<div align="center">
-  <a href="https://discord.gg/evmos">
-    <img alt="Discord" src="https://img.shields.io/discord/809048090249134080.svg" />
-  </a>
-  <a href="https://github.com/AizelNetwork/evmos/actions?query=branch%3Amain+workflow%3ALint">
-    <img alt="Lint Status" src="https://github.com/AizelNetwork/evmos/actions/workflows/lint.yml/badge.svg?branch=main" />
-  </a>
-  <a href="https://codecov.io/gh/evmos/evmos">
-    <img alt="Code Coverage" src="https://codecov.io/gh/evmos/evmos/branch/main/graph/badge.svg" />
-  </a>
-</div>
-
-## About
-
-CosmEvm is a scalable, high-throughput Proof-of-Stake EVM blockchain
-that is fully compatible and interoperable with Ethereum.
-It's built using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/)
-which runs on top of the [CometBFT](https://github.com/cometbft/cometbft) consensus engine.
-
-## Quick Start
-
-To learn how CosmEvm works from a high-level perspective,
-go to the [Protocol Overview](https://docs.evmos.org/protocol) section of the documentation.
-You can also check the instructions to [Run a Node](https://docs.evmos.org/protocol/evmos-cli#run-an-evmos-node).
-
-## Documentation
-
-Our documentation is hosted in a [separate repository](https://github.com/evmos/docs) and can be found at [docs.evmos.org](https://docs.evmos.org).
-Head over there and check it out.
-
-## Installation
-
-For prerequisites and detailed build instructions
-please read the [Installation](https://docs.evmos.org/protocol/evmos-cli) instructions.
-Once the dependencies are installed, run:
+Before you begin, you must set some key environment variables. In particular, configure your home directory for Aizel (the location where node configuration and data are stored). For example, add the following lines to your shell profile (e.g. `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`):
 
 ```bash
-make install
+# Base directory for Aizel node configurations
+export AIZELHOME=$HOME/.cosmos/aizeld
+
+# (Optional) Set your chain ID if you want to override the default in scripts:
+export CHAIN_ID=aizel_2015-3333
 ```
 
-Or check out the latest [release](https://github.com/AizelNetwork/evmos/releases).
+Then reload your shell configuration:
 
-## Community
-
-The following chat channels and forums are great spots to ask questions about CosmEvm:
-
-- [CosmEvm X (Twitter)](https://x.com/CosmEvmOrg)
-- [CosmEvm Discord](https://discord.gg/evmos)
-- [CosmEvm Forum](https://commonwealth.im/evmos)
-
-## Contributing
-
-Looking for a good place to start contributing?
-Check out some
-[`good first issues`](https://github.com/AizelNetwork/evmos/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
-
-For additional instructions, standards and style guides, please refer to the [Contributing](./CONTRIBUTING.md) document.
-
-## Careers
-
-See our open positions on [our Careers page](https://evmos.org/careers/).
-
-## Licensing
-
-Starting from April 21st, 2023, the CosmEvm repository will update its License
-from GNU Lesser General Public License v3.0 (LGPLv3) to [CosmEvm Non-Commercial
-License 1.0 (ENCL-1.0)](./LICENSE). This license applies to all software released from CosmEvm
-version 13 or later, except for specific files, as follows, which will continue
-to be licensed under LGPLv3:
-
-- `x/erc20/keeper/proposals.go`
-- `x/erc20/types/utils.go`
-
-LGPLv3 will continue to apply to older versions ([<v13.0.0](https://github.com/AizelNetwork/evmos/releases/tag/v12.1.5))
-of the CosmEvm repository. For more information see [LICENSE](./LICENSE).
-
-> [!WARNING]
->
-> **NOTE: If you are interested in using this software**
-> email us at [os@evmos.org](mailto:os@evmos.org).
-
-### SPDX Identifier
-
-The following header including a license identifier in [SPDX](https://spdx.dev/learn/handling-license-info/)
-short form has been added to all ENCL-1.0 files:
-
-```go
-// Copyright Tharsis Labs Ltd.(CosmEvm)
-// SPDX-License-Identifier:ENCL-1.0(https://github.com/AizelNetwork/evmos/blob/main/LICENSE)
+```bash
+source ~/.bash_profile
 ```
 
-Exempted files contain the following SPDX ID:
+### 0.2. Install Go
 
-```go
-// Copyright Tharsis Labs Ltd.(CosmEvm)
-// SPDX-License-Identifier:LGPL-3.0-only
+1. **Download and Install Go**
+
+   Visit [golang.org/dl](https://golang.org/dl/) and download the latest stable version for your OS. For example, on Linux you can run:
+
+   ```bash
+   wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
+   sudo tar -C /usr/local -xzf go1.23.6.linux-amd64.tar.gz
+   ```
+
+2. **Set Up Go Environment Variables**
+
+   Add these lines to your shell profile (if not already present):
+
+   ```bash
+   # Go installation paths
+   export GOROOT=/usr/local/go
+   export GOPATH=$HOME/go
+   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+   ```
+
+   Reload your shell configuration:
+
+   ```bash
+   source ~/.bash_profile
+   ```
+
+3. **Verify Go Installation**
+
+   Check that Go is installed and the environment is configured:
+
+   ```bash
+   go version
+   echo $GOROOT
+   echo $GOPATH
+   ```
+
+### 0.3. Install Additional Dependencies
+
+If you run into issues (for example, an error about OpenBLAS linker flags), unset the conflicting environment variables before building:
+
+```bash
+unset LDFLAGS
+unset CFLAGS
 ```
 
-### License FAQ
+---
 
-Find below an overview of the Permissions and Limitations of the CosmEvm Non-Commercial License 1.0.
-For more information, check out the full ENCL-1.0 FAQ [here](./LICENSE_FAQ.md).
+## 1. Build the Customized Blockchain Binary
 
-| Permissions                                                                                                                                                                  | Prohibited                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| - Private Use, including distribution and modification<br />- Commercial use on designated blockchains<br />- Commercial use with CosmEvm permit (to be separately negotiated) | - Commercial use, other than on designated blockchains, without CosmEvm permit |
+We now build our customized blockchain based on our forked repository.
+
+1. **Clone the Repository**
+
+   Clone our forked repository:
+
+   ```bash
+   git clone git@github.com:AizelNetwork/CosmEvm.git
+   cd CosmEvm
+   ```
+
+2. **Build and Install the Binary**
+
+   Use the provided Makefile to build and install the binary:
+
+   ```bash
+   make install
+   ```
+
+   > **Tip:** If you run into issues related to linker flags, run the `unset LDFLAGS` and `unset CFLAGS` commands before `make install`.
+
+---
+
+## 2. Configure Node1
+
+### 2.1. Generate Bech32 Format Addresses from EVM Cold Wallets
+
+Your chain uses Bech32‑formatted addresses. For any external (cold wallet) EVM address you want to fund, convert the EVM hex address into Bech32 with the following command:
+
+```bash
+aizeld debug addr [evm-address]
+```
+
+For example:
+
+```bash
+aizeld debug addr 0xaaafB3972B05630fCceE866eC69CdADd9baC2771
+```
+
+This outputs something like:
+
+```
+Address bytes: [170 175 179 151 43 5 99 15 204 238 134 110 198 156 218 221 155 172 39 113]
+Bech32 Acc: aizel142hm89etq43sln8wsehvd8x6mkd6cfm35279kg
+Bech32 Val: aizelvaloper142hm89etq43sln8wsehvd8x6mkd6cfm3k9mj49
+```
+
+Use the **Bech32 Acc** address (starting with `aizel1`) for allocating genesis coins to your external wallets. Update the addresses for `USER1`, `USER2`, `USER3`, and `USER4` in your production script (`prod_node1.sh`) accordingly.
+
+### 2.2. Customize Validator Mnemonics
+
+In your production initialization script (`prod_node1.sh`), you will see variables such as `VAL1_MNEMONIC` and `VAL2_MNEMONIC`. **These are sample mnemonics provided for testing purposes only.**  
+For production, **customize these values** with your own secure mnemonic phrases:
+
+```bash
+VAL1_MNEMONIC="your secure mnemonic for validator1 goes here"
+VAL2_MNEMONIC="your secure mnemonic for validator2 goes here"
+```
+
+Make sure to keep these mnemonics safe and never share them publicly.
+
+### 2.3. Initialize Node1
+
+Run your production initialization script for node1:
+
+```bash
+./prod_node1.sh
+```
+
+Your `prod_node1.sh` should perform tasks such as:
+- Setting client configuration (chain-id, keyring, etc.)
+- Importing validator keys using your custom mnemonics
+- Initializing the node (`aizeld init`)
+- Adjusting denominations in the genesis file
+- Allocating genesis accounts (using your Bech32 addresses)
+- Generating a gentx for validator1
+
+After running the script, verify the genesis file:
+
+```bash
+aizeld validate-genesis --home $AIZELHOME/node1
+```
+
+---
+
+## 3. Configure Node2
+
+Your production script for node2 (`prod_node2.sh`) creates a second node by copying the node1 folder and then modifying settings. It also signs a gentx for validator2.
+
+- Deleting any existing node2 folder  
+- Copying node1’s folder to node2  
+- Changing file ownership (so your user can modify them)  
+- Updating ports, node name, and persistent peers  
+- Signing validator2’s gentx  
+- Copying the gentx files from node2 back into node1  
+
+```bash
+./prod_node1.sh
+```
+
+> **Reminder:** Update your validator mnemonics in your production scripts (e.g. in `prod_node1.sh` and any related configuration files) with your own secure values.
+
+---
+
+## 4. Collect Genesis Transactions
+
+After node1 and node2 have signed their gentxs, run the genesis collection script to aggregate all gentx files and update the genesis file.
+
+Create a script called `collect-gentxs.sh` (or update your existing one) with the following content:
+
+```bash
+./collect-gentxs.sh
+```
+
+---
+
+## 5. Start the Nodes
+
+Create a start script (`start-nodes.sh`) that starts both nodes. For example:
+
+```bash
+./start-nodes.sh
+```
+
+---
+
+## 6. Test Your Chain
+
+After the nodes have started, test your blockchain by retrieving the current block number via the JSON‑RPC endpoint:
+
+```bash
+curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+  http://localhost:18545
+```
+
+You should receive a JSON response with the block number (in hexadecimal).
+
+---
+
+## FAQ
+
+**Q:** *I encountered an issue when running `make install` regarding OpenBLAS linker flags.*  
+**A:** Unset the conflicting environment variables before building:
+
+```bash
+unset LDFLAGS
+unset CFLAGS
+```
+---
