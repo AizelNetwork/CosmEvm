@@ -166,7 +166,7 @@ Your production script for node2 (`prod_node2.sh`) creates a second node by copy
 - Copying the gentx files from node2 back into node1  
 
 ```bash
-./prod_node1.sh
+./prod_node2.sh
 ```
 
 > **Reminder:** Update your validator mnemonics in your production scripts (e.g. in `prod_node1.sh` and any related configuration files) with your own secure values.
