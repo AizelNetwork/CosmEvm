@@ -29,6 +29,8 @@ import (
 )
 
 var activators = map[string]func(*JumpTable){
+	"ethereum_5656": enable5656,
+	"ethereum_3860": enable3860,
 	"ethereum_3855": enable3855,
 	"ethereum_3529": enable3529,
 	"ethereum_3198": enable3198,
@@ -36,8 +38,6 @@ var activators = map[string]func(*JumpTable){
 	"ethereum_2200": enable2200,
 	"ethereum_1884": enable1884,
 	"ethereum_1344": enable1344,
-	// Add your custom EIP-5656
-	"ethereum_5656": enable5656,
 }
 
 // EnableEIP enables the given EIP on the config.
@@ -276,4 +276,12 @@ func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]by
 
 	// MCOPY pushes nothing onto stack.
 	return nil, nil
+}
+
+func enable3860(jt *JumpTable) {
+	// Overwrite the dynamic gas function for CREATE
+	jt[CREATE].dynamicGas = gasCreateEIP3860
+
+	// Overwrite the dynamic gas function for CREATE2
+	jt[CREATE2].dynamicGas = gasCreate2EIP3860
 }

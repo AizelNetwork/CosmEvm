@@ -292,3 +292,116 @@ func gasMCopy(
 	}
 	return totalGas, nil
 }
+
+var ErrMaxInitCodeSizeExceeded = errors.New("init code size exceeds maximum allowed by EIP-3860")
+
+// gasCreateEIP3860 calculates the additional dynamic gas cost for the CREATE opcode according to EIP-3860.
+// It assumes that the top two items on the stack are:
+//   - initcodeSize (top of stack)
+//   - initcodeOffset (next item)
+//
+// and that the constant base cost is already applied separately.
+func gasCreateEIP3860(
+	evm *EVM,
+	contract *Contract,
+	stack *Stack,
+	mem *Memory,
+	memorySize uint64,
+) (uint64, error) {
+	// -----------------------------------------------------------
+	// 1. Read the initcode offset and size from the stack.
+	// For CREATE, the typical stack layout is: [ value, initcodeOffset, initcodeSize ]
+	// where initcodeSize is at the top of the stack.
+	size := stack.Back(0).Uint64()
+	offset := stack.Back(1).Uint64()
+
+	// -----------------------------------------------------------
+	// 2. Enforce the EIP-3860 maximum initcode size limit.
+	const maxInitCodeSize = 49152
+	if size > maxInitCodeSize {
+		return 0, ErrMaxInitCodeSizeExceeded
+	}
+
+	// -----------------------------------------------------------
+	// 3. Calculate the required memory expansion.
+	// The memory must cover the range [offset, offset+size).
+	requiredMemSize, overflow := math.SafeAdd(offset, size)
+	if overflow {
+		return 0, ErrGasUintOverflow
+	}
+	memGas, err := memoryGasCost(mem, requiredMemSize)
+	if err != nil {
+		return 0, err
+	}
+
+	// -----------------------------------------------------------
+	// 4. Compute the EIP-3860 overhead: 2 gas per 32-byte chunk of initcode.
+	// That is, overhead = 2 * ceil(size / 32) = 2 * ((size + 31) / 32)
+	chunkCount := (size + 31) / 32
+	overhead, overflow2 := math.SafeMul(chunkCount, 2)
+	if overflow2 {
+		return 0, ErrGasUintOverflow
+	}
+
+	// -----------------------------------------------------------
+	// 5. Combine the memory expansion cost and the EIP-3860 overhead.
+	totalGas, overflow3 := math.SafeAdd(memGas, overhead)
+	if overflow3 {
+		return 0, ErrGasUintOverflow
+	}
+	return totalGas, nil
+}
+
+// gasCreate2EIP3860 calculates the extra dynamic gas cost for the CREATE2 opcode according to EIP-3860.
+// It assumes that on the stack, the top item is the initcode size and the next item is the initcode offset.
+func gasCreate2EIP3860(
+	evm *EVM,
+	contract *Contract,
+	stack *Stack,
+	mem *Memory,
+	memorySize uint64,
+) (uint64, error) {
+	// -----------------------------------------------------------
+	// 1. Read the initcode offset and size from the stack.
+	// Assumption: For CREATE2, the stack layout is:
+	//   ... , initcode_offset, initcode_size
+	// with initcode_size at the top of the stack.
+	size := stack.Back(0).Uint64()
+	offset := stack.Back(1).Uint64()
+
+	// -----------------------------------------------------------
+	// 2. Enforce maximum initcode size per EIP-3860.
+	const maxInitCodeSize = 49152
+	if size > maxInitCodeSize {
+		return 0, ErrMaxInitCodeSizeExceeded
+	}
+
+	// -----------------------------------------------------------
+	// 3. Calculate the required memory expansion.
+	// The memory must cover [offset, offset+size). Use SafeAdd to prevent overflows.
+	requiredMemSize, overflow := math.SafeAdd(offset, size)
+	if overflow {
+		return 0, ErrGasUintOverflow
+	}
+	memGas, err := memoryGasCost(mem, requiredMemSize)
+	if err != nil {
+		return 0, err
+	}
+
+	// -----------------------------------------------------------
+	// 4. Compute the EIP-3860 overhead.
+	// EIP-3860 charges 2 gas for every 32-byte chunk of initcode.
+	chunkCount := (size + 31) / 32 // rounds up to the nearest 32 bytes
+	overhead, overflow := math.SafeMul(chunkCount, 2)
+	if overflow {
+		return 0, ErrGasUintOverflow
+	}
+
+	// -----------------------------------------------------------
+	// 5. Combine the memory expansion cost and the EIP-3860 overhead.
+	totalGas, overflow := math.SafeAdd(memGas, overhead)
+	if overflow {
+		return 0, ErrGasUintOverflow
+	}
+	return totalGas, nil
+}
