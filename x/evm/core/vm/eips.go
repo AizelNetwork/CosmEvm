@@ -17,11 +17,13 @@
 package vm
 
 import (
+	"errors"
 	"fmt"
 	"sort"
 	"strconv"
 	"strings"
 
+	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/holiman/uint256"
 )
@@ -34,6 +36,8 @@ var activators = map[string]func(*JumpTable){
 	"ethereum_2200": enable2200,
 	"ethereum_1884": enable1884,
 	"ethereum_1344": enable1344,
+	// Add your custom EIP-5656
+	"ethereum_5656": enable5656,
 }
 
 // EnableEIP enables the given EIP on the config.
@@ -213,5 +217,63 @@ func enable3855(jt *JumpTable) {
 // opPush0 implements the PUSH0 opcode
 func opPush0(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]byte, error) {
 	scope.Stack.Push(new(uint256.Int))
+	return nil, nil
+}
+
+func enable5656(jt *JumpTable) {
+	jt[MCOPY] = &operation{
+		// This function will be called when EVM executes opcode 0x5E
+		execute:     opMCopy,        // see next snippet
+		dynamicGas:  gasMCopy,       // if you want a custom dynamic gas calc
+		constantGas: GasQuickStep,   // or GasQuickStep, etc. if you prefer
+		minStack:    minStack(3, 0), // MCOPY pops 3 items (length, src, dst)
+		maxStack:    maxStack(3, 0),
+	}
+}
+
+var ErrMemoryOverflow = errors.New("memory overflow")
+
+func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]byte, error) {
+	// Pop stack items (top of stack is length, then src, then dst).
+	val := scope.Stack.Pop()  // <-- returns a value: uint256.Int
+	length := (&val).Uint64() // <-- call the pointer method on its address
+
+	val2 := scope.Stack.Pop()
+	src := (&val2).Uint64()
+
+	val3 := scope.Stack.Pop()
+	dst := (&val3).Uint64()
+
+	// If length == 0, no copying needed; just return.
+	if length == 0 {
+		return nil, nil
+	}
+
+	// Compute end offsets to see how far we need memory to extend
+	endSrc, overflow1 := math.SafeAdd(src, length)
+	endDst, overflow2 := math.SafeAdd(dst, length)
+	if overflow1 || overflow2 {
+		return nil, ErrMemoryOverflow // or some error to indicate overflow
+	}
+
+	// Resize memory so it covers [src..(src+length-1)] and [dst..(dst+length-1)].
+	// We only need to resize to the largest of endSrc or endDst:
+	maxEnd := endSrc
+	if endDst > maxEnd {
+		maxEnd = endDst
+	}
+	scope.Memory.Resize(maxEnd)
+
+	// Read from memory: get a pointer to the src segment
+	srcData := scope.Memory.GetPtr(int64(src), int64(length))
+	if srcData == nil {
+		// Means offset is out of the actual memory store bounds
+		return nil, ErrMemoryOverflow
+	}
+
+	// Write to memory at [dst..dst+length]
+	scope.Memory.Set(dst, length, srcData)
+
+	// MCOPY pushes nothing onto stack.
 	return nil, nil
 }

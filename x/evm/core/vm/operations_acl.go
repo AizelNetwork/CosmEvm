@@ -242,3 +242,53 @@ func makeSelfdestructGasFn(refundsEnabled bool) gasFunc {
 	}
 	return gasFunc
 }
+
+func gasMCopy(
+	evm *EVM,
+	contract *Contract,
+	stack *Stack,
+	mem *Memory,
+	memorySize uint64,
+) (uint64, error) {
+	// The MCOPY opcode is expected to pop 3 stack items in the execution function:
+	//   [length, srcOffset, destOffset]
+	// Typically the top of stack is length, then srcOffset, then destOffset,
+	// but we read them in reverse order with 'Back()'.
+	length := stack.Back(0).Uint64()
+	src := stack.Back(1).Uint64()
+	dst := stack.Back(2).Uint64()
+
+	// --- 1) Calculate memory expansion costs ---
+	// For the copy to be valid, we need memory to cover [dst..dst+length-1]
+	// and [src..src+length-1].
+	endDst, overflow1 := math.SafeAdd(dst, length)
+	endSrc, overflow2 := math.SafeAdd(src, length)
+	if overflow1 || overflow2 {
+		return 0, ErrGasUintOverflow
+	}
+	maxEnd := endDst
+	if endSrc > maxEnd {
+		maxEnd = endSrc
+	}
+	// The memoryGasCost function is used to see if we need to expand memory
+	// beyond 'memorySize' up to 'maxEnd'.
+	memGas, err := memoryGasCost(mem, memorySize)
+	if err != nil {
+		return 0, err
+	}
+
+	// --- 2) Calculate the "per-byte" copy cost ---
+	// EIP-5656 suggests 3 gas per byte (similar to other copy ops).
+	const copyGasPerByte = 3
+	copyCost, overflow3 := math.SafeMul(copyGasPerByte, length)
+	if overflow3 {
+		return 0, ErrGasUintOverflow
+	}
+
+	// Combine memory expansion + copy cost
+	totalGas, overflow4 := math.SafeAdd(memGas, copyCost)
+	if overflow4 {
+		return 0, ErrGasUintOverflow
+	}
+	return totalGas, nil
+}
