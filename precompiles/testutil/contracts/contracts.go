@@ -8,14 +8,14 @@ import (
 	"fmt"
 	"math/big"
 
+	aizelapp "github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	aizelutil "github.com/AizelNetwork/CosmEvm/testutil"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	aizelapp "github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	aizelutil "github.com/AizelNetwork/evmos/v20/testutil"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // Call is a helper function to call any arbitrary smart contract.

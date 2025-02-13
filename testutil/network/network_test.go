@@ -10,11 +10,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	"github.com/AizelNetwork/CosmEvm/testutil/network"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	"github.com/AizelNetwork/evmos/v20/testutil/network"
 
-	aizelnetwork "github.com/AizelNetwork/evmos/v20/testutil/network"
+	aizelnetwork "github.com/AizelNetwork/CosmEvm/testutil/network"
 )
 
 type IntegrationTestSuite struct {

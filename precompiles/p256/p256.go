@@ -19,10 +19,10 @@ package p256
 import (
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/crypto/secp256r1"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/crypto/secp256r1"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 var _ vm.PrecompiledContract = &Precompile{}

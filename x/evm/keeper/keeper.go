@@ -10,6 +10,8 @@ import (
 	"cosmossdk.io/math"
 	"cosmossdk.io/store/prefix"
 	storetypes "cosmossdk.io/store/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/wrappers"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
@@ -17,11 +19,9 @@ import (
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/wrappers"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // Keeper grants access to the EVM module state and implements the go-ethereum StateDB interface.

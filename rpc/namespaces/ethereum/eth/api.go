@@ -15,11 +15,11 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/AizelNetwork/evmos/v20/rpc/backend"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend"
 
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // The Ethereum API allows applications to connect to an Evmos node that is

@@ -15,13 +15,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/AizelNetwork/evmos/v20/cmd/config"
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/cmd/config"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,14 +10,14 @@ import (
 	errorsmod "cosmossdk.io/errors"
 
 	sdkmath "cosmossdk.io/math"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cometbft/cometbft/libs/bytes"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/pkg/errors"
 )
 

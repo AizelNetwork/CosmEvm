@@ -7,11 +7,11 @@ import (
 	"crypto/elliptic"
 	"crypto/rand"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/p256"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cometbft/cometbft/crypto"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/p256"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 var trueValue = common.LeftPadBytes(common.Big1.Bytes(), 32)

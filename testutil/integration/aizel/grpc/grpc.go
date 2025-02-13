@@ -4,15 +4,15 @@
 package grpc
 
 import (
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	commongrpc "github.com/AizelNetwork/CosmEvm/testutil/integration/common/grpc"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
+	infltypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/ethereum/go-ethereum/common"
-	commongrpc "github.com/AizelNetwork/evmos/v20/testutil/integration/common/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
-	infltypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 // Handler is an interface that defines the methods that are used to query

@@ -5,10 +5,10 @@ package post_test
 
 import (
 	sdkmath "cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/app/post"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/AizelNetwork/evmos/v20/app/post"
 
-	// "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
+	// "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

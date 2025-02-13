@@ -7,15 +7,15 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/precompiles/gov"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	v1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/gov"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/ginkgo/v2"

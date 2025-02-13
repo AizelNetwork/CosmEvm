@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
 
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 // GetQueryCmd returns the parent command for all erc20 CLI query commands

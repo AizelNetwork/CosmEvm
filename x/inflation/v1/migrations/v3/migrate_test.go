@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	storetypes "cosmossdk.io/store/types"
+	v3 "github.com/AizelNetwork/CosmEvm/x/inflation/v1/migrations/v3"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
-	v3 "github.com/AizelNetwork/evmos/v20/x/inflation/v1/migrations/v3"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 	"github.com/stretchr/testify/require"
 )
 

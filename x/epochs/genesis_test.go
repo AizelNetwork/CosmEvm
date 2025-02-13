@@ -4,14 +4,14 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/utils"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 
-	simapp "github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/x/epochs"
-	"github.com/AizelNetwork/evmos/v20/x/epochs/types"
+	simapp "github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/x/epochs"
+	"github.com/AizelNetwork/CosmEvm/x/epochs/types"
 )
 
 func TestEpochsExportGenesis(t *testing.T) {

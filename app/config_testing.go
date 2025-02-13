@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"cosmossdk.io/math"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // EvmosOptionsFn defines a function type for setting app options specifically for

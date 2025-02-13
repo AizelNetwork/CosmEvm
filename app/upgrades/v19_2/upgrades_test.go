@@ -11,10 +11,10 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	v192 "github.com/AizelNetwork/evmos/v20/app/upgrades/v19_2"
-	testnetwork "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
+	v192 "github.com/AizelNetwork/CosmEvm/app/upgrades/v19_2"
+	testnetwork "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 )
 
 const expNonce uint64 = 3

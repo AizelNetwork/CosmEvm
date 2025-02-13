@@ -11,11 +11,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	signingtypes "github.com/cosmos/cosmos-sdk/types/tx/signing"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/hd"
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	"github.com/AizelNetwork/evmos/v20/tests/integration/ledger/mocks"
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/crypto/hd"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	"github.com/AizelNetwork/CosmEvm/tests/integration/ledger/mocks"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 
 	"github.com/spf13/cobra"
 

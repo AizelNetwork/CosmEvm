@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/precompiles/common"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/precompiles/common"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 	"github.com/stretchr/testify/require"
 )
 

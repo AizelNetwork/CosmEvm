@@ -5,10 +5,10 @@ package v5
 import (
 	"cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"
+	typesV4 "github.com/AizelNetwork/CosmEvm/x/feemarket/migrations/v5/types"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	typesV4 "github.com/AizelNetwork/evmos/v20/x/feemarket/migrations/v5/types"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 )
 
 // MigrateStore migrates the x/feemarket module state from the consensus version 4 to

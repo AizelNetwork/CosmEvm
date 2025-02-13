@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	"github.com/stretchr/testify/require"
 )
 

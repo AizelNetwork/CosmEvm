@@ -12,15 +12,15 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/precompiles/vesting"
+	aizelutil "github.com/AizelNetwork/CosmEvm/testutil"
+	aizelutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	"github.com/AizelNetwork/evmos/v20/precompiles/vesting"
-	aizelutil "github.com/AizelNetwork/evmos/v20/testutil"
-	aizelutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
 )
 
 var (

@@ -9,9 +9,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
 	"github.com/stretchr/testify/require"
 
-	"github.com/AizelNetwork/evmos/v20/app"
-	aizeld "github.com/AizelNetwork/evmos/v20/cmd/aizeld"
-	"github.com/AizelNetwork/evmos/v20/utils"
+	"github.com/AizelNetwork/CosmEvm/app"
+	aizeld "github.com/AizelNetwork/CosmEvm/cmd/aizeld"
+	"github.com/AizelNetwork/CosmEvm/utils"
 )
 
 func TestInitCmd(t *testing.T) {

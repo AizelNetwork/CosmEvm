@@ -5,19 +5,19 @@ import (
 	"fmt"
 	"math/big"
 
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
 
 	"cosmossdk.io/math"
 
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	aizelutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	aizelutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
 )
 
 func (s *PrecompileTestSuite) TestCreateValidator() {

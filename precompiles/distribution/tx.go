@@ -6,15 +6,15 @@ package distribution
 import (
 	"fmt"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
 
 	"github.com/ethereum/go-ethereum/common"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	distributionkeeper "github.com/cosmos/cosmos-sdk/x/distribution/keeper"
 	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 const (

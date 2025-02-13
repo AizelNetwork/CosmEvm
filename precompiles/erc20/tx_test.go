@@ -5,14 +5,14 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
 )
 
 var (

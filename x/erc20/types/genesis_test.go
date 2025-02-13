@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 	"github.com/stretchr/testify/suite"
 )
 

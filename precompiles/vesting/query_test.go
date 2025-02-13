@@ -5,9 +5,9 @@ package vesting_test
 import (
 	"fmt"
 
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/vesting"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/vesting"
 )
 
 func (s *PrecompileTestSuite) TestBalances() {

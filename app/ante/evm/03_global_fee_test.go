@@ -5,7 +5,7 @@ package evm_test
 import (
 	sdkmath "cosmossdk.io/math"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AizelNetwork/evmos/v20/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/app/ante/evm"
 )
 
 func (suite *EvmAnteTestSuite) TestGlobalFee() {

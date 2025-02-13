@@ -7,11 +7,11 @@ import (
 	"crypto/ecdsa"
 	"errors"
 
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	"github.com/AizelNetwork/CosmEvm/wallets/accounts"
+	"github.com/AizelNetwork/CosmEvm/wallets/ledger/mocks"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	"github.com/AizelNetwork/evmos/v20/wallets/accounts"
-	"github.com/AizelNetwork/evmos/v20/wallets/ledger/mocks"
 )
 
 func RegisterDerive(mockWallet *mocks.Wallet, addr common.Address, publicKey *ecdsa.PublicKey) {

@@ -7,16 +7,16 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
+	testfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	testfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	erc20mocks "github.com/AizelNetwork/evmos/v20/x/erc20/types/mocks"
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	erc20mocks "github.com/AizelNetwork/CosmEvm/x/erc20/types/mocks"
 )
 
 func (suite *KeeperTestSuite) TestQueryERC20() {

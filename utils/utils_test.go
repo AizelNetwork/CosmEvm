@@ -10,7 +10,7 @@ import (
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,10 +8,10 @@ import (
 
 	"github.com/hashicorp/go-metrics"
 
+	epochstypes "github.com/AizelNetwork/CosmEvm/x/epochs/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	epochstypes "github.com/AizelNetwork/evmos/v20/x/epochs/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 // BeforeEpochStart: noop, We don't need to do anything here

@@ -8,11 +8,11 @@ import (
 	"fmt"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	cmnfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
+	cmnnet "github.com/AizelNetwork/CosmEvm/testutil/integration/common/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	cmnfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	cmnnet "github.com/AizelNetwork/evmos/v20/testutil/integration/common/network"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
 )
 
 // FundAccountWithBaseDenom funds the given account with the given amount of the network's

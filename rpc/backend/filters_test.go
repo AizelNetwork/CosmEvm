@@ -3,12 +3,12 @@ package backend
 import (
 	"encoding/json"
 
+	"github.com/AizelNetwork/CosmEvm/rpc/backend/mocks"
+	ethrpc "github.com/AizelNetwork/CosmEvm/rpc/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	cmttypes "github.com/cometbft/cometbft/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/AizelNetwork/evmos/v20/rpc/backend/mocks"
-	ethrpc "github.com/AizelNetwork/evmos/v20/rpc/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestGetLogs() {

@@ -6,12 +6,12 @@ package slashing_test
 import (
 	"fmt"
 
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/slashing"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/slashing"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 )
 
 func (s *PrecompileTestSuite) TestUnjail() {

@@ -10,9 +10,9 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 )
 
 func (suite *KeeperTestSuite) TestRegisterERC20CodeHash() {

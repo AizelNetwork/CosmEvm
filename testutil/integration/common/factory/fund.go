@@ -6,9 +6,9 @@ package factory
 import (
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
 )
 
 // FundTxFactory is the interface that wraps the common methods to fund accounts

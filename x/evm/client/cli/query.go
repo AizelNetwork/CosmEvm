@@ -3,13 +3,13 @@
 package cli
 
 import (
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // GetQueryCmd returns the parent command for all x/bank CLi query commands.

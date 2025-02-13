@@ -40,13 +40,13 @@ import (
 	mintypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/hd"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	srvflags "github.com/AizelNetwork/evmos/v20/server/flags"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/crypto/hd"
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	srvflags "github.com/AizelNetwork/CosmEvm/server/flags"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/network"
+	"github.com/AizelNetwork/CosmEvm/testutil/network"
 )
 
 var (

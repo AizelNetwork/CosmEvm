@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/tracers"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/tracers"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 type account struct{}

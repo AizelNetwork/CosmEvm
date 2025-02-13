@@ -7,10 +7,10 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	epochstypes "github.com/AizelNetwork/CosmEvm/x/epochs/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	epochstypes "github.com/AizelNetwork/evmos/v20/x/epochs/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 	"github.com/stretchr/testify/require"
 )
 

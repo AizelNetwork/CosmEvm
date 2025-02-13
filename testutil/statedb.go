@@ -4,10 +4,10 @@
 package testutil
 
 import (
+	"github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
 )
 
 // NewStateDB returns a new StateDB for testing purposes.

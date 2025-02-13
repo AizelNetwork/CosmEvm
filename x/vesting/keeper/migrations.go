@@ -3,10 +3,10 @@
 package keeper
 
 import (
+	v2 "github.com/AizelNetwork/CosmEvm/x/vesting/migrations/v2"
+	v3 "github.com/AizelNetwork/CosmEvm/x/vesting/migrations/v3"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	v2 "github.com/AizelNetwork/evmos/v20/x/vesting/migrations/v2"
-	v3 "github.com/AizelNetwork/evmos/v20/x/vesting/migrations/v3"
 )
 
 var (

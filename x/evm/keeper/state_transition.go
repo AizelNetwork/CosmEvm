@@ -11,16 +11,16 @@ import (
 	"cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 
+	aizelcore "github.com/AizelNetwork/CosmEvm/x/evm/core/core"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
-	aizelcore "github.com/AizelNetwork/evmos/v20/x/evm/core/core"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 // NewEVM generates a go-ethereum VM from the provided Message fields and the chain parameters

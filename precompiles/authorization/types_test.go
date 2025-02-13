@@ -6,11 +6,11 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 	"github.com/stretchr/testify/require"
 )
 

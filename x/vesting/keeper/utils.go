@@ -10,7 +10,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 // GetClawbackVestingAccount is a helper function to get the account from the

@@ -7,10 +7,10 @@ import (
 	"errors"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/x/vesting/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/x/vesting/types"
 )
 
 // setupClawbackVestingAccount sets up a clawback vesting account

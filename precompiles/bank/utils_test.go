@@ -2,14 +2,14 @@ package bank_test
 
 import (
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/precompiles/bank"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/bank"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"

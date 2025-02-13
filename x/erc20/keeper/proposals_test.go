@@ -3,18 +3,18 @@ package keeper_test
 import (
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	testfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	testutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	erc20mocks "github.com/AizelNetwork/CosmEvm/x/erc20/types/mocks"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	testfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	testutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	erc20mocks "github.com/AizelNetwork/evmos/v20/x/erc20/types/mocks"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/mock"
 )
 

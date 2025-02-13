@@ -12,12 +12,12 @@ import (
 
 	"cosmossdk.io/math"
 
+	testutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	testutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
 )
 
 func TestPrecompileIntegrationTestSuite(t *testing.T) {

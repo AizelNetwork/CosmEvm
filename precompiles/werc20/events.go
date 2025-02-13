@@ -12,7 +12,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
 )
 
 const (

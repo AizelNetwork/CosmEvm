@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
 	mock "github.com/stretchr/testify/mock"
 )
 

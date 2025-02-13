@@ -22,8 +22,8 @@ import (
 
 	ibcgotesting "github.com/cosmos/ibc-go/v8/testing"
 
-	aizelapp "github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/types"
+	aizelapp "github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/types"
 )
 
 // DefaultTestingAppInit is a test helper function used to initialize an App

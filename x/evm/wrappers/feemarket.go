@@ -6,9 +6,9 @@ package wrappers
 import (
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 )
 
 // FeeMarketWrapper is a wrapper around the feemarket keeper

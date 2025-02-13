@@ -3,7 +3,7 @@ package utils_test
 import (
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/app/ante/testutils"
+	"github.com/AizelNetwork/CosmEvm/app/ante/testutils"
 	"github.com/stretchr/testify/suite"
 )
 

@@ -13,7 +13,7 @@ import (
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	porttypes "github.com/cosmos/ibc-go/v8/modules/core/05-port/types"
 
-	"github.com/AizelNetwork/evmos/v20/x/ibc/transfer/types"
+	"github.com/AizelNetwork/CosmEvm/x/ibc/transfer/types"
 )
 
 // Keeper defines the modified IBC transfer keeper that embeds the original one.

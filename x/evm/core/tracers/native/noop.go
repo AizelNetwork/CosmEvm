@@ -21,9 +21,9 @@ import (
 	"math/big"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/tracers"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/tracers"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 func init() {

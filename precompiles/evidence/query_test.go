@@ -8,9 +8,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/evidence"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/evidence"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
 )
 
 func (s *PrecompileTestSuite) TestEvidence() {

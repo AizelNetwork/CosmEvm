@@ -52,12 +52,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/rosetta"
 
-	"github.com/AizelNetwork/evmos/v20/cmd/aizeld/opendb"
-	"github.com/AizelNetwork/evmos/v20/indexer"
-	ethdebug "github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/debug"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	srvflags "github.com/AizelNetwork/evmos/v20/server/flags"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/cmd/aizeld/opendb"
+	"github.com/AizelNetwork/CosmEvm/indexer"
+	ethdebug "github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/debug"
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	srvflags "github.com/AizelNetwork/CosmEvm/server/flags"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 // DBOpener is a function to open `application.db`, potentially with customized options.

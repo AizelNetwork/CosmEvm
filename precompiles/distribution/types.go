@@ -9,14 +9,14 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/cmd/config"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/cmd/config"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 )
 
 // EventSetWithdrawAddress defines the event data for the SetWithdrawAddress transaction.

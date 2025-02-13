@@ -4,11 +4,11 @@ import (
 	"testing"
 
 	storetypes "cosmossdk.io/store/types"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/vesting/keeper"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/vesting/keeper"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
 	"github.com/stretchr/testify/require"
 )
 

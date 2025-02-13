@@ -4,7 +4,7 @@
 package network
 
 import (
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 type CoinInfo struct {

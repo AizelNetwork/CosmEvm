@@ -16,7 +16,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/AizelNetwork/evmos/v20/wallets/accounts"
+	"github.com/AizelNetwork/CosmEvm/wallets/accounts"
 	usb "github.com/zondax/hid"
 )
 

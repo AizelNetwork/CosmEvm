@@ -13,7 +13,7 @@ import (
 	"fmt"
 
 	geth "github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 )
 
 // Configure applies the changes to the virtual machine configuration.

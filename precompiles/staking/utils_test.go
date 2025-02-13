@@ -7,10 +7,10 @@ import (
 	"slices"
 	"time"
 
-	cmnfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	cmnfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
 
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
@@ -28,15 +28,15 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	aizelutil "github.com/AizelNetwork/evmos/v20/testutil"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	stakingkeeper "github.com/AizelNetwork/evmos/v20/x/staking/keeper"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	aizelutil "github.com/AizelNetwork/CosmEvm/testutil"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	stakingkeeper "github.com/AizelNetwork/CosmEvm/x/staking/keeper"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 // stipend to pay EVM tx fees

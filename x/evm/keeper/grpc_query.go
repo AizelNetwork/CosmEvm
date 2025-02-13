@@ -10,8 +10,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/logger"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/tracers"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/logger"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/tracers"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -19,18 +19,18 @@ import (
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethparams "github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmante "github.com/AizelNetwork/evmos/v20/x/evm/ante"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmante "github.com/AizelNetwork/CosmEvm/x/evm/ante"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 var _ types.QueryServer = Keeper{}

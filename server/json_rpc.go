@@ -9,14 +9,14 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 
+	"github.com/AizelNetwork/CosmEvm/rpc"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
-	"github.com/AizelNetwork/evmos/v20/rpc"
 
-	svrconfig "github.com/AizelNetwork/evmos/v20/server/config"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	svrconfig "github.com/AizelNetwork/CosmEvm/server/config"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 // StartJSONRPC starts the JSON-RPC server

@@ -3,7 +3,7 @@ package upgrade_test
 import (
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/tests/e2e/upgrade"
+	"github.com/AizelNetwork/CosmEvm/tests/e2e/upgrade"
 	"github.com/stretchr/testify/require"
 )
 

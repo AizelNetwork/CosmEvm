@@ -7,10 +7,10 @@ import (
 	"slices"
 	"sort"
 
+	"github.com/AizelNetwork/CosmEvm/utils"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // GetParams returns the total set of evm parameters.

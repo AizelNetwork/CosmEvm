@@ -11,10 +11,10 @@ import (
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/gomega"
 
+	integrationutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	epochstypes "github.com/AizelNetwork/CosmEvm/x/epochs/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	integrationutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	epochstypes "github.com/AizelNetwork/evmos/v20/x/epochs/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 var (

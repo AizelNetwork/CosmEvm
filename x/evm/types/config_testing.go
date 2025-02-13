@@ -13,8 +13,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	geth "github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 // testChainConfig is the chain configuration used in the EVM to defined which

@@ -6,8 +6,8 @@ package types_test
 import (
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

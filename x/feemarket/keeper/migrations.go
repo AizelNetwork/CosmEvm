@@ -3,10 +3,10 @@
 package keeper
 
 import (
+	v4 "github.com/AizelNetwork/CosmEvm/x/feemarket/migrations/v4"
+	v5 "github.com/AizelNetwork/CosmEvm/x/feemarket/migrations/v5"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	v4 "github.com/AizelNetwork/evmos/v20/x/feemarket/migrations/v4"
-	v5 "github.com/AizelNetwork/evmos/v20/x/feemarket/migrations/v5"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 )
 
 // Migrator is a struct for handling in-place store migrations.

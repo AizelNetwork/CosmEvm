@@ -19,11 +19,11 @@ import (
 	"testing"
 
 	storetypes "cosmossdk.io/store/types"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	v4 "github.com/AizelNetwork/CosmEvm/x/feemarket/migrations/v4"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	v4 "github.com/AizelNetwork/evmos/v20/x/feemarket/migrations/v4"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 

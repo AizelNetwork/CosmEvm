@@ -9,10 +9,10 @@ package network
 import (
 	"strings"
 
+	"github.com/AizelNetwork/CosmEvm/utils"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // updateErc20GenesisStateForChainID modify the default genesis state for the

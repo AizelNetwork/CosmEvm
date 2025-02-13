@@ -4,14 +4,14 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	testfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	testhandler "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	testnetwork "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	testfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	testhandler "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	testnetwork "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

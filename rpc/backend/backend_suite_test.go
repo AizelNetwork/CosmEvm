@@ -18,15 +18,15 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/hd"
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	"github.com/AizelNetwork/evmos/v20/indexer"
-	"github.com/AizelNetwork/evmos/v20/rpc/backend/mocks"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/crypto/hd"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	"github.com/AizelNetwork/CosmEvm/indexer"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend/mocks"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 type BackendTestSuite struct {

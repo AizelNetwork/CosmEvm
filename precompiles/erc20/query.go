@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/ibc"
+	auth "github.com/AizelNetwork/CosmEvm/precompiles/authorization"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/AizelNetwork/evmos/v20/ibc"
-	auth "github.com/AizelNetwork/evmos/v20/precompiles/authorization"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 const (

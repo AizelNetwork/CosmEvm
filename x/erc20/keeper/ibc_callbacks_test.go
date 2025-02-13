@@ -6,17 +6,17 @@ import (
 	"math/big"
 
 	"cosmossdk.io/math"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/keeper"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
 	"github.com/ethereum/go-ethereum/common"
 
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	"github.com/AizelNetwork/CosmEvm/testutil"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/secp256k1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	"github.com/AizelNetwork/evmos/v20/testutil"
 
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	clienttypes "github.com/cosmos/ibc-go/v8/modules/core/02-client/types"
@@ -24,9 +24,9 @@ import (
 	ibcgotesting "github.com/cosmos/ibc-go/v8/testing"
 	ibcmock "github.com/cosmos/ibc-go/v8/testing/mock"
 
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 var erc20Denom = "erc20/0xdac17f958d2ee523a2206206994597c13d831ec7"

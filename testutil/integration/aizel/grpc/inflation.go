@@ -6,7 +6,7 @@ package grpc
 import (
 	"context"
 
-	infltypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	infltypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 // GetPeriod returns the current period.

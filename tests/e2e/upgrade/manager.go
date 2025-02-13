@@ -20,7 +20,7 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/ethereum/go-ethereum/common"
-	testnetwork "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
+	testnetwork "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
 	"github.com/ory/dockertest/v3"
 	"github.com/ory/dockertest/v3/docker"
 )

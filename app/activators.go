@@ -3,8 +3,8 @@
 package app
 
 import (
-	"github.com/AizelNetwork/evmos/v20/app/eips"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/app/eips"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 )
 
 // aizelActivators defines a map of opcode modifiers associated

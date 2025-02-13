@@ -1,10 +1,10 @@
 package backend
 
 import (
+	"github.com/AizelNetwork/CosmEvm/rpc/backend/mocks"
+	rpc "github.com/AizelNetwork/CosmEvm/rpc/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AizelNetwork/evmos/v20/rpc/backend/mocks"
-	rpc "github.com/AizelNetwork/evmos/v20/rpc/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 )
 
 var _ feemarkettypes.QueryClient = &mocks.FeeMarketQueryClient{}

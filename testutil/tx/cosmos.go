@@ -8,15 +8,15 @@ import (
 	protov2 "google.golang.org/protobuf/proto"
 
 	sdkmath "cosmossdk.io/math"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 
-	"github.com/AizelNetwork/evmos/v20/app"
+	"github.com/AizelNetwork/CosmEvm/app"
 )
 
 var (

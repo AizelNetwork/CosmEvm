@@ -10,8 +10,8 @@ import (
 	"fmt"
 
 	"cosmossdk.io/math"
-	"github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
+	"github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/utils"
 )
 
 // NOTE: Remember to add the ConversionFactor associated with constants.

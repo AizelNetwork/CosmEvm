@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	"github.com/AizelNetwork/CosmEvm/tests/e2e/upgrade"
+	"github.com/AizelNetwork/CosmEvm/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	"github.com/AizelNetwork/evmos/v20/tests/e2e/upgrade"
-	"github.com/AizelNetwork/evmos/v20/types"
 	"github.com/stretchr/testify/require"
 )
 

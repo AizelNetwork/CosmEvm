@@ -10,11 +10,11 @@ import (
 	"google.golang.org/grpc/status"
 
 	"cosmossdk.io/store/prefix"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 var _ types.QueryServer = Keeper{}

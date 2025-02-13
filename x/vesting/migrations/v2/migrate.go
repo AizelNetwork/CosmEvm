@@ -5,8 +5,8 @@ package v2
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	v1vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/migrations/types"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	v1vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/migrations/types"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 // MigrateStore migrates the x/vesting module state from the consensus version 1 to

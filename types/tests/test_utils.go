@@ -5,7 +5,7 @@ package tests
 
 import (
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 var (

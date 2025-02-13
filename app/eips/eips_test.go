@@ -8,17 +8,17 @@ import (
 	"math/big"
 	"testing"
 
+	"github.com/AizelNetwork/CosmEvm/app/eips"
+	"github.com/AizelNetwork/CosmEvm/app/eips/testdata"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	integrationutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
 	"github.com/cosmos/cosmos-sdk/crypto/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/app/eips"
-	"github.com/AizelNetwork/evmos/v20/app/eips/testdata"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	integrationutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
 
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 
 	"github.com/ethereum/go-ethereum/params"
 

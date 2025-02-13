@@ -7,11 +7,11 @@ import (
 	"encoding/json"
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // GetERC20Balance returns the token balance of a given account address for

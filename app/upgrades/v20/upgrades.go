@@ -7,13 +7,13 @@ import (
 	"context"
 
 	upgradetypes "cosmossdk.io/x/upgrade/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmkeeper "github.com/AizelNetwork/CosmEvm/x/evm/keeper"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 	"github.com/ethereum/go-ethereum/common"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmkeeper "github.com/AizelNetwork/evmos/v20/x/evm/keeper"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // CreateUpgradeHandler creates an SDK upgrade handler for v20

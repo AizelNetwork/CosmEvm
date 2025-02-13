@@ -3,8 +3,8 @@ package erc20_test
 import (
 	"math/big"
 
-	"github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 )
 
 //nolint:dupl // these tests are not duplicates

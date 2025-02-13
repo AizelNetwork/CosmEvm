@@ -7,12 +7,12 @@ import (
 	"fmt"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	"github.com/AizelNetwork/CosmEvm/precompiles/werc20"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	"github.com/AizelNetwork/evmos/v20/precompiles/werc20"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 // GetERC20PrecompileInstance returns the precompile instance for the given address.

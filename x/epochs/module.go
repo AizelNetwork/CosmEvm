@@ -22,9 +22,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/AizelNetwork/evmos/v20/x/epochs/client/cli"
-	"github.com/AizelNetwork/evmos/v20/x/epochs/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/epochs/types"
+	"github.com/AizelNetwork/CosmEvm/x/epochs/client/cli"
+	"github.com/AizelNetwork/CosmEvm/x/epochs/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/epochs/types"
 )
 
 // consensusVersion defines the current x/epochs module consensus version.

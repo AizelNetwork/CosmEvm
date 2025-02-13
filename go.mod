@@ -1,4 +1,4 @@
-module github.com/AizelNetwork/evmos/v20
+module github.com/AizelNetwork/CosmEvm
 
 go 1.22.8
 
