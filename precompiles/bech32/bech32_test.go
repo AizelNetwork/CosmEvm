@@ -3,11 +3,11 @@ package bech32_test
 import (
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/cmd/config"
+	"github.com/AizelNetwork/CosmEvm/precompiles/bech32"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/cmd/config"
-	"github.com/AizelNetwork/evmos/v20/precompiles/bech32"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 func (s *PrecompileTestSuite) TestNewPrecompile() {

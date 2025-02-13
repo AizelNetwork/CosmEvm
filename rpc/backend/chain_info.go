@@ -7,6 +7,10 @@ import (
 	"math/big"
 
 	"cosmossdk.io/math"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	cmtrpcclient "github.com/cometbft/cometbft/rpc/client"
 	cmtrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -14,10 +18,6 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rpc"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 	"github.com/pkg/errors"
 )
 

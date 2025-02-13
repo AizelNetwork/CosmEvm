@@ -8,6 +8,8 @@ import (
 	"math/big"
 	"strconv"
 
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
@@ -15,8 +17,6 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/trie"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

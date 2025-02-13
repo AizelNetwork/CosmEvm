@@ -5,18 +5,18 @@ import (
 	"math/big"
 
 	"cosmossdk.io/math"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 
 	"github.com/ethereum/go-ethereum/common"
 
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/distribution"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/distribution/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/distribution"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 )
 
 func (s *PrecompileTestSuite) TestSetWithdrawAddress() {

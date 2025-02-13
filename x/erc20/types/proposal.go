@@ -11,7 +11,7 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	v1beta1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 // constants

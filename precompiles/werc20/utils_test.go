@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // callType constants to differentiate between

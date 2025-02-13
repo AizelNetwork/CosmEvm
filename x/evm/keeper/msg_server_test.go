@@ -8,9 +8,9 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) TestEthereumTx() {

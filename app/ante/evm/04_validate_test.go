@@ -13,10 +13,10 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 type validateMsgParams struct {

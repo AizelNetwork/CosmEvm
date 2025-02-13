@@ -19,7 +19,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/hashicorp/go-metrics"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 var _ types.MsgServer = &Keeper{}

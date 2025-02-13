@@ -10,8 +10,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // InitGenesis initializes genesis state based on exported genesis

@@ -10,7 +10,7 @@ import (
 
 	"golang.org/x/exp/maps"
 
-	"github.com/AizelNetwork/evmos/v20/app"
+	"github.com/AizelNetwork/CosmEvm/app"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/testutil/mock"
@@ -35,13 +35,13 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	epochstypes "github.com/AizelNetwork/evmos/v20/x/epochs/types"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
-	infltypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	epochstypes "github.com/AizelNetwork/CosmEvm/x/epochs/types"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
+	infltypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // genSetupFn is the type for the module genesis setup functions

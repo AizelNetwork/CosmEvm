@@ -5,11 +5,11 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/bank"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	aizelutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/bank"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	aizelutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 )
 
 func (s *PrecompileTestSuite) TestBalances() {

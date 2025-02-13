@@ -14,9 +14,9 @@ import (
 
 	proto "github.com/cosmos/gogoproto/proto"
 
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 
 	"github.com/stretchr/testify/require"
 )

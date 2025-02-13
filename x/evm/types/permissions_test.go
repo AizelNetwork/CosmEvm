@@ -6,9 +6,9 @@ package types_test
 import (
 	"testing"
 
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/suite"
 )
 

@@ -9,7 +9,7 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 var _ types.MsgServer = &Keeper{}

@@ -3,13 +3,13 @@ package evm_test
 import (
 	"math/big"
 
-	evmante "github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	"github.com/AizelNetwork/evmos/v20/testutil"
+	evmante "github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/testutil"
 
 	storetypes "cosmossdk.io/store/types"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (suite *AnteTestSuite) TestEthSetupContextDecorator() {

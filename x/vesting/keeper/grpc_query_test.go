@@ -8,9 +8,9 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 func TestBalances(t *testing.T) {

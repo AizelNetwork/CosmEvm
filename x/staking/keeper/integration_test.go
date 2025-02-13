@@ -11,13 +11,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	aizelfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	aizelfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/ginkgo/v2"

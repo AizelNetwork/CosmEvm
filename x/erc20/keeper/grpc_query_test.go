@@ -6,8 +6,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 func (suite *KeeperTestSuite) TestTokenPairs() {

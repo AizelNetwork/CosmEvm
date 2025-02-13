@@ -5,11 +5,11 @@ package factory
 import (
 	"strings"
 
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 
 	errorsmod "cosmossdk.io/errors"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
 )
 
 // buildMsgEthereumTx builds an Ethereum transaction from the given arguments and populates the From field.

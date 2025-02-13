@@ -41,14 +41,14 @@ import (
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/hd"
-	aizelkr "github.com/AizelNetwork/evmos/v20/crypto/keyring"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	srvflags "github.com/AizelNetwork/evmos/v20/server/flags"
-	"github.com/AizelNetwork/evmos/v20/testutil/network"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	"github.com/AizelNetwork/CosmEvm/crypto/hd"
+	aizelkr "github.com/AizelNetwork/CosmEvm/crypto/keyring"
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	srvflags "github.com/AizelNetwork/CosmEvm/server/flags"
+	"github.com/AizelNetwork/CosmEvm/testutil/network"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 )
 
 var (

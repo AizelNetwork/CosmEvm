@@ -1,8 +1,8 @@
 package erc20_test
 
 import (
-	"github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // TODO: This is not yet producing the correct reason bytes so we skip this test for now,

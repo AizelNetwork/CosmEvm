@@ -10,13 +10,13 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 const (

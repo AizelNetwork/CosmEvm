@@ -9,6 +9,10 @@ import (
 	"time"
 
 	"cosmossdk.io/log"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	tmrpcclient "github.com/cometbft/cometbft/rpc/client"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 	"github.com/cosmos/cosmos-sdk/client"
@@ -21,10 +25,6 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // BackendI implements the Cosmos and EVM backend.

@@ -9,10 +9,10 @@ import (
 	storetypes "cosmossdk.io/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/gov"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/gov"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 )
 
 func (s *PrecompileTestSuite) TestVoteEvent() {

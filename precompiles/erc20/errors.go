@@ -7,13 +7,13 @@ import (
 	"errors"
 	"strings"
 
+	"github.com/AizelNetwork/CosmEvm/ibc"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/ibc"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // Errors that have formatted information are defined here as a string.

@@ -8,16 +8,16 @@ import (
 	"math/big"
 
 	sdkmath "cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/app"
+	auth "github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	"github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/app"
-	auth "github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	"github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 // Define useful variables for tests here.

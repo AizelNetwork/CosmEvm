@@ -25,6 +25,7 @@ import (
 	snapshottypes "cosmossdk.io/store/snapshots/types"
 	storetypes "cosmossdk.io/store/types"
 	confixcmd "cosmossdk.io/tools/confix/cmd"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/client"
 	clientcfg "github.com/cosmos/cosmos-sdk/client/config"
@@ -45,19 +46,18 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/crisis"
 	genutilcli "github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 
 	rosettaCmd "github.com/cosmos/rosetta/cmd"
 
-	aizelclient "github.com/AizelNetwork/evmos/v20/client"
-	"github.com/AizelNetwork/evmos/v20/client/block"
-	"github.com/AizelNetwork/evmos/v20/client/debug"
-	aizelserver "github.com/AizelNetwork/evmos/v20/server"
-	servercfg "github.com/AizelNetwork/evmos/v20/server/config"
-	srvflags "github.com/AizelNetwork/evmos/v20/server/flags"
+	aizelclient "github.com/AizelNetwork/CosmEvm/client"
+	"github.com/AizelNetwork/CosmEvm/client/block"
+	"github.com/AizelNetwork/CosmEvm/client/debug"
+	aizelserver "github.com/AizelNetwork/CosmEvm/server"
+	servercfg "github.com/AizelNetwork/CosmEvm/server/config"
+	srvflags "github.com/AizelNetwork/CosmEvm/server/flags"
 
-	"github.com/AizelNetwork/evmos/v20/app"
-	aizelkr "github.com/AizelNetwork/evmos/v20/crypto/keyring"
+	"github.com/AizelNetwork/CosmEvm/app"
+	aizelkr "github.com/AizelNetwork/CosmEvm/crypto/keyring"
 )
 
 const EnvPrefix = "EVMOS"

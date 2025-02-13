@@ -7,27 +7,27 @@ import (
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
 
+	"github.com/AizelNetwork/CosmEvm/cmd/config"
+	"github.com/AizelNetwork/CosmEvm/utils"
 	sdktestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	"github.com/AizelNetwork/evmos/v20/cmd/config"
-	"github.com/AizelNetwork/evmos/v20/utils"
 
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	govtypesv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"

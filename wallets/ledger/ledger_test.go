@@ -4,13 +4,13 @@
 package ledger_test
 
 import (
+	"github.com/AizelNetwork/CosmEvm/wallets/accounts"
+	"github.com/AizelNetwork/CosmEvm/wallets/ledger"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	signingtypes "github.com/cosmos/cosmos-sdk/types/tx/signing"
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/wallets/accounts"
-	"github.com/AizelNetwork/evmos/v20/wallets/ledger"
 )
 
 func (suite *LedgerTestSuite) TestEvmosLedgerDerivation() {

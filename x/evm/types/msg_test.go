@@ -9,20 +9,20 @@ import (
 	"testing"
 
 	sdkmath "cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/AizelNetwork/evmos/v20/encoding"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/encoding"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 const invalidAddress = "0x0000"

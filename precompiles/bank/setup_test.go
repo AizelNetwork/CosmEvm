@@ -6,14 +6,14 @@ import (
 	"cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/bank"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	integrationutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/bank"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	integrationutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 	"github.com/stretchr/testify/suite"
 )
 

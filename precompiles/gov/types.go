@@ -6,15 +6,15 @@ package gov
 import (
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/utils"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/utils"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
 )
 
 // EventVote defines the event data for the Vote transaction.

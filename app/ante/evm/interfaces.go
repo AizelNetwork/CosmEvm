@@ -6,15 +6,15 @@ import (
 	"math/big"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 )
 
 // EVMKeeper defines the expected keeper interface used on the AnteHandler

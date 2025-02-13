@@ -5,11 +5,11 @@ import (
 
 	"cosmossdk.io/math"
 
+	cosmosante "github.com/AizelNetwork/CosmEvm/app/ante/cosmos"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	cosmosante "github.com/AizelNetwork/evmos/v20/app/ante/cosmos"
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 )
 
 var execTypes = []struct {

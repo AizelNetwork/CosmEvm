@@ -8,13 +8,13 @@ import (
 
 	"cosmossdk.io/log"
 	storetypes "cosmossdk.io/store/types"
+	transferkeeper "github.com/AizelNetwork/CosmEvm/x/ibc/transfer/keeper"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authzkeeper "github.com/cosmos/cosmos-sdk/x/authz/keeper"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	transferkeeper "github.com/AizelNetwork/evmos/v20/x/ibc/transfer/keeper"
 
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 // Keeper of this module maintains collections of erc20.

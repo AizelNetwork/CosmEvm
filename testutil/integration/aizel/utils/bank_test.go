@@ -4,12 +4,12 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/stretchr/testify/require"
 )
 

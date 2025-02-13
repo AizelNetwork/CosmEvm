@@ -22,11 +22,11 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/server/config"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/server/config"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // Accounts returns the list of accounts available to this node.

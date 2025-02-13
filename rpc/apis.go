@@ -10,16 +10,16 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/AizelNetwork/evmos/v20/rpc/backend"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/debug"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/eth"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/eth/filters"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/miner"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/net"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/personal"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/txpool"
-	"github.com/AizelNetwork/evmos/v20/rpc/namespaces/ethereum/web3"
-	"github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/debug"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/eth"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/eth/filters"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/miner"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/net"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/personal"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/txpool"
+	"github.com/AizelNetwork/CosmEvm/rpc/namespaces/ethereum/web3"
+	"github.com/AizelNetwork/CosmEvm/types"
 
 	rpcclient "github.com/cometbft/cometbft/rpc/jsonrpc/client"
 )

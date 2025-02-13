@@ -6,13 +6,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	commonfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	integrationutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	integrationutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	commonfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 
 	//nolint:revive // dot imports are fine for Ginkgo
 	. "github.com/onsi/ginkgo/v2"

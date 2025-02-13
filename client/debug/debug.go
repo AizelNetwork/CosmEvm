@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	aizel "github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	aizel "github.com/AizelNetwork/CosmEvm/types"
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"

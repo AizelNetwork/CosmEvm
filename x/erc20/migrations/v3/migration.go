@@ -5,9 +5,9 @@ package v3
 
 import (
 	storetypes "cosmossdk.io/store/types"
+	v3types "github.com/AizelNetwork/CosmEvm/x/erc20/migrations/v3/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	v3types "github.com/AizelNetwork/evmos/v20/x/erc20/migrations/v3/types"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
 )
 
 var isTrue = []byte{0x01}

@@ -5,7 +5,7 @@ package evmv1
 import (
 	"math/big"
 
-	ethutils "github.com/AizelNetwork/evmos/v20/utils/eth"
+	ethutils "github.com/AizelNetwork/CosmEvm/utils/eth"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

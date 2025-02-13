@@ -13,15 +13,15 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/werc20"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/werc20"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 type PrecompileUnitTestSuite struct {

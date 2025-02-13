@@ -10,12 +10,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	grpchandler "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	grpchandler "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 
 	"github.com/stretchr/testify/require"
 )

@@ -12,7 +12,7 @@ import (
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/hashicorp/go-metrics"
 )
 

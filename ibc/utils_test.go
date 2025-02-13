@@ -8,11 +8,11 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	teststypes "github.com/AizelNetwork/CosmEvm/types/tests"
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 	channeltypes "github.com/cosmos/ibc-go/v8/modules/core/04-channel/types"
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	teststypes "github.com/AizelNetwork/evmos/v20/types/tests"
 )
 
 func init() {

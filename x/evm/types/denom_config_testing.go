@@ -13,8 +13,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/types"
 )
 
 var (

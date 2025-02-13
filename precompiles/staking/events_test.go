@@ -3,19 +3,19 @@ package staking_test
 import (
 	"math/big"
 
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
 
 	"cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	"github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
 )
 
 func (s *PrecompileTestSuite) TestApprovalEvent() {

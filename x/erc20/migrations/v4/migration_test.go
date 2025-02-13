@@ -4,14 +4,14 @@ import (
 	"testing"
 
 	storetypes "cosmossdk.io/store/types"
+	"github.com/AizelNetwork/CosmEvm/encoding"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/AizelNetwork/evmos/v20/encoding"
 	"github.com/stretchr/testify/require"
 
-	v3types "github.com/AizelNetwork/evmos/v20/x/erc20/migrations/v3/types"
-	v4 "github.com/AizelNetwork/evmos/v20/x/erc20/migrations/v4"
+	v3types "github.com/AizelNetwork/CosmEvm/x/erc20/migrations/v3/types"
+	v4 "github.com/AizelNetwork/CosmEvm/x/erc20/migrations/v4"
 
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"

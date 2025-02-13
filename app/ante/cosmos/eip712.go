@@ -7,6 +7,9 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	"github.com/AizelNetwork/CosmEvm/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
@@ -19,11 +22,8 @@ import (
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	"github.com/AizelNetwork/evmos/v20/types"
 
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 var aizelCodec codec.ProtoCodecMarshaler

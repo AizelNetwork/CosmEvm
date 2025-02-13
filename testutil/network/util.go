@@ -24,6 +24,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/ethclient"
 
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdkserver "github.com/cosmos/cosmos-sdk/server"
 	"github.com/cosmos/cosmos-sdk/server/api"
 	servergrpc "github.com/cosmos/cosmos-sdk/server/grpc"
@@ -36,10 +37,9 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 
-	"github.com/AizelNetwork/evmos/v20/server"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/server"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 func startInProcess(cfg Config, val *Validator) error {

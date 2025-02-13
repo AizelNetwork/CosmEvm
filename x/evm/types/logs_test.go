@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 
 	"github.com/ethereum/go-ethereum/common"
 )

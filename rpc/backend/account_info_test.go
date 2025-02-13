@@ -11,10 +11,10 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/AizelNetwork/evmos/v20/rpc/backend/mocks"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend/mocks"
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestGetCode() {

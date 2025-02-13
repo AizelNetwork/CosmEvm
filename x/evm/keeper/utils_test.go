@@ -13,11 +13,11 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	servercfg "github.com/AizelNetwork/evmos/v20/server/config"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/evm/keeper/testdata"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	servercfg "github.com/AizelNetwork/CosmEvm/server/config"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/evm/keeper/testdata"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) EvmDenom() string {

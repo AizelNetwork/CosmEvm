@@ -12,7 +12,7 @@ import (
 	cmtstore "github.com/cometbft/cometbft/store"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/AizelNetwork/evmos/v20/indexer"
+	"github.com/AizelNetwork/CosmEvm/indexer"
 )
 
 // NewIndexTxCmd creates a new Cobra command to index historical Ethereum transactions.

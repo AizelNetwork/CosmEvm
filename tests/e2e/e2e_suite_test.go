@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/AizelNetwork/CosmEvm/tests/e2e/upgrade"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/utils"
 	"github.com/cosmos/cosmos-sdk/codec"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
-	"github.com/AizelNetwork/evmos/v20/tests/e2e/upgrade"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/utils"
 	"github.com/stretchr/testify/suite"
 )
 

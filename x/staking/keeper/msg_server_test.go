@@ -12,12 +12,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/staking/keeper"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/staking/keeper"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 	"github.com/stretchr/testify/require"
 )
 

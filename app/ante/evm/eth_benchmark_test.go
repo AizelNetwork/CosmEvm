@@ -7,15 +7,15 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"
+	ethante "github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/testutil"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethante "github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	"github.com/AizelNetwork/evmos/v20/testutil"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 
-	"github.com/AizelNetwork/evmos/v20/app/ante/testutils"
+	"github.com/AizelNetwork/CosmEvm/app/ante/testutils"
 )
 
 func BenchmarkEthGasConsumeDecorator(b *testing.B) {

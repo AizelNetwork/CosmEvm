@@ -4,6 +4,7 @@
 package types
 
 import (
+	migrationtypes "github.com/AizelNetwork/CosmEvm/x/vesting/migrations/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -12,7 +13,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/vesting/exported"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 	govv1beta1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
-	migrationtypes "github.com/AizelNetwork/evmos/v20/x/vesting/migrations/types"
 )
 
 var (

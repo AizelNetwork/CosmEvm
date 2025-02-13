@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 )
 
 // EVMConfigurator allows to extend x/evm module configurations. The configurator modifies

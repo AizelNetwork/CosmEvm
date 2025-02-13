@@ -6,7 +6,7 @@ package post_test
 import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
-	"github.com/AizelNetwork/evmos/v20/app/post"
+	"github.com/AizelNetwork/CosmEvm/app/post"
 )
 
 func (s *PostTestSuite) TestPostHandlerOptions() {

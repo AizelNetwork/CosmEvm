@@ -5,6 +5,11 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
+	aizelapp "github.com/AizelNetwork/CosmEvm/app"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	aizelutil "github.com/AizelNetwork/CosmEvm/testutil"
+	testutiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/crypto/tmhash"
 	cmttypes "github.com/cometbft/cometbft/types"
@@ -15,11 +20,6 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	aizelapp "github.com/AizelNetwork/evmos/v20/app"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	aizelutil "github.com/AizelNetwork/evmos/v20/testutil"
-	testutiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
 )
 
 // SetupWithGenesisValSet initializes a new EvmosApp with a validator set and genesis accounts

@@ -5,12 +5,12 @@ package evm
 import (
 	errorsmod "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/x/evm/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/x/evm/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // VerifyAccountBalance checks that the account balance is greater than the total transaction cost.

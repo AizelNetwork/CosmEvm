@@ -10,15 +10,15 @@ import (
 
 	"cosmossdk.io/math"
 
+	testtx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	testtx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // defaultChain represents the default chain ID used in the suite setup.

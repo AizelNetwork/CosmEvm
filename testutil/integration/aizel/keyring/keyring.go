@@ -9,7 +9,7 @@ import (
 
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 )
 
 type Key struct {

@@ -7,8 +7,8 @@ import (
 	"cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	utils "github.com/AizelNetwork/evmos/v20/utils"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	utils "github.com/AizelNetwork/CosmEvm/utils"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 // MintAndAllocateInflation performs inflation minting and allocation

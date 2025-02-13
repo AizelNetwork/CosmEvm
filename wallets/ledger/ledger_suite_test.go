@@ -21,10 +21,10 @@ import (
 	auxTx "github.com/cosmos/cosmos-sdk/x/auth/tx"
 	bankTypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/wallets/ledger"
-	"github.com/AizelNetwork/evmos/v20/wallets/ledger/mocks"
-	"github.com/AizelNetwork/evmos/v20/wallets/usbwallet"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/wallets/ledger"
+	"github.com/AizelNetwork/CosmEvm/wallets/ledger/mocks"
+	"github.com/AizelNetwork/CosmEvm/wallets/usbwallet"
 )
 
 type LedgerTestSuite struct {

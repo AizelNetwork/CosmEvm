@@ -7,12 +7,12 @@ import (
 	"fmt"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
 )
 
 // ERC20RegistrationData is the necessary data to provide in order to register an ERC20 token.

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"slices"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	abcitypes "github.com/cometbft/cometbft/abci/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // CheckTxTopics checks if all expected topics are present in the transaction response

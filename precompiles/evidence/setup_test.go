@@ -12,11 +12,11 @@ import (
 	"cosmossdk.io/x/evidence/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/AizelNetwork/evmos/v20/precompiles/evidence"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/precompiles/evidence"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
 )
 
 type PrecompileTestSuite struct {

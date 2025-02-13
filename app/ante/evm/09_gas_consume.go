@@ -6,11 +6,11 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // UpdateCumulativeGasWanted updates the cumulative gas wanted

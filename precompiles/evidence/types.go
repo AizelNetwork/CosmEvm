@@ -11,7 +11,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"github.com/ethereum/go-ethereum/common"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
 )
 
 const (

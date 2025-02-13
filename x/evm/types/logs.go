@@ -9,7 +9,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 // NewTransactionLogs creates a new NewTransactionLogs instance.

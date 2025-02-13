@@ -8,6 +8,11 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	commonfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/common/factory"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
@@ -16,11 +21,6 @@ import (
 	"github.com/cosmos/gogoproto/proto"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	commonfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/common/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // TxFactory defines a struct that can build and broadcast transactions for the Evmos

@@ -8,15 +8,15 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	stakingprecompile "github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	testcontracts "github.com/AizelNetwork/CosmEvm/precompiles/testutil/contracts"
+	testfactory "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	testnetwork "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	stakingprecompile "github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	testcontracts "github.com/AizelNetwork/evmos/v20/precompiles/testutil/contracts"
-	testfactory "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	testnetwork "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 
 	//nolint:revive // okay to use dot imports for Ginkgo
 	. "github.com/onsi/ginkgo/v2"

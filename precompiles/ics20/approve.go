@@ -4,11 +4,11 @@
 package ics20
 
 import (
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 // Approve implements the ICS20 approve transactions.

@@ -9,6 +9,9 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
+	rpctypes "github.com/AizelNetwork/CosmEvm/rpc/types"
+	"github.com/AizelNetwork/CosmEvm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	tmrpcclient "github.com/cometbft/cometbft/rpc/client"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -16,9 +19,6 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	rpctypes "github.com/AizelNetwork/evmos/v20/rpc/types"
-	"github.com/AizelNetwork/evmos/v20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 	"github.com/pkg/errors"
 )
 

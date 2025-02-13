@@ -6,13 +6,13 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // CanTransfer checks if the sender is allowed to transfer funds according to the EVM block

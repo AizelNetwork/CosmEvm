@@ -6,17 +6,17 @@ package utils
 import (
 	"fmt"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
+	infltypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	govv1types "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
-	infltypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 type UpdateParamsInput struct {

@@ -4,12 +4,12 @@ package keeper
 
 import (
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // EVMConfig creates the EVMConfig based on current state

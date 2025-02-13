@@ -4,7 +4,7 @@ package keeper
 
 import (
 	"cosmossdk.io/math"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

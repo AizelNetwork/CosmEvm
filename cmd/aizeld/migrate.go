@@ -19,7 +19,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/version"
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
 
-	"github.com/AizelNetwork/evmos/v20/utils"
+	"github.com/AizelNetwork/CosmEvm/utils"
 )
 
 // FlagGenesisTime defines the genesis time in string format

@@ -19,7 +19,7 @@ defined with the signature:
 func(jt *vm.JumpTable) {}
 ```
 
-where `vm` is the package `"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"`.
+where `vm` is the package `"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"`.
 
 Custom EIPs are used to modify the behavior of opcodes, which are described by the `operation` structure:
 

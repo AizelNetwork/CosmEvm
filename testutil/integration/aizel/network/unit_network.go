@@ -3,11 +3,11 @@
 package network
 
 import (
+	"github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
 )
 
 // UnitTestNetwork is the implementation of the Network interface for unit tests.

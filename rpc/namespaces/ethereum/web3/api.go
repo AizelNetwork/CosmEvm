@@ -3,7 +3,7 @@
 package web3
 
 import (
-	"github.com/AizelNetwork/evmos/v20/version"
+	"github.com/AizelNetwork/CosmEvm/version"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"

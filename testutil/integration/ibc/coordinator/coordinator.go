@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
+	aizelibc "github.com/AizelNetwork/CosmEvm/ibc/testing"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/common/network"
+	ibcchain "github.com/AizelNetwork/CosmEvm/testutil/integration/ibc/chain"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	ibctesting "github.com/cosmos/ibc-go/v8/testing"
-	aizelibc "github.com/AizelNetwork/evmos/v20/ibc/testing"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/common/network"
-	ibcchain "github.com/AizelNetwork/evmos/v20/testutil/integration/ibc/chain"
 )
 
 // Coordinator is the interface that defines the methods that are used to

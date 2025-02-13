@@ -13,8 +13,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 // EthVestingExpenseTracker tracks both the total transaction value to be sent across Ethereum

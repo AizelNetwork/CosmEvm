@@ -4,10 +4,13 @@ import (
 	"fmt"
 	"math/big"
 
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 
 	"cosmossdk.io/math"
+	"github.com/AizelNetwork/CosmEvm/precompiles/gov"
+	"github.com/AizelNetwork/CosmEvm/precompiles/testutil"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/cosmos/cosmos-sdk/testutil/testdata"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
@@ -16,9 +19,6 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	govv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/precompiles/gov"
-	"github.com/AizelNetwork/evmos/v20/precompiles/testutil"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 var (

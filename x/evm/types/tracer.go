@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/logger"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/params"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/logger"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 const (

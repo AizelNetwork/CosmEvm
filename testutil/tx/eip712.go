@@ -16,10 +16,10 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
-	"github.com/AizelNetwork/evmos/v20/app"
-	cryptocodec "github.com/AizelNetwork/evmos/v20/crypto/codec"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	"github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/app"
+	cryptocodec "github.com/AizelNetwork/CosmEvm/crypto/codec"
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	"github.com/AizelNetwork/CosmEvm/types"
 )
 
 type EIP712TxArgs struct {

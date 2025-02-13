@@ -3,12 +3,12 @@ package erc20_test
 import (
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	cmn "github.com/AizelNetwork/CosmEvm/precompiles/common"
+	erc20precompile "github.com/AizelNetwork/CosmEvm/precompiles/erc20"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	cmn "github.com/AizelNetwork/evmos/v20/precompiles/common"
-	erc20precompile "github.com/AizelNetwork/evmos/v20/precompiles/erc20"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
 )
 
 //nolint:dupl // this is not a duplicate of the approval events test

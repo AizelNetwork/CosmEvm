@@ -4,7 +4,7 @@ package miner
 
 import (
 	"github.com/cosmos/cosmos-sdk/server"
-	"github.com/AizelNetwork/evmos/v20/rpc/backend"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"

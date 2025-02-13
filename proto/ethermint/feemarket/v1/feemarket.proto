@@ -6,7 +6,7 @@ package ethermint.feemarket.v1;
 import "amino/amino.proto";
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/AizelNetwork/evmos/v20/x/feemarket/types";
+option go_package = "github.com/AizelNetwork/CosmEvm/x/feemarket/types";
 
 // Params defines the feemarket module parameters
 message Params {

@@ -25,12 +25,12 @@ import (
 
 	"github.com/dop251/goja"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/tracers"
+	jsassets "github.com/AizelNetwork/CosmEvm/x/evm/core/tracers/js/internal/tracers"
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/tracers"
-	jsassets "github.com/AizelNetwork/evmos/v20/x/evm/core/tracers/js/internal/tracers"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 )
 
 var assetTracers = make(map[string]string)

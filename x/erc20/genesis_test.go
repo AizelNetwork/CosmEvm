@@ -15,14 +15,14 @@ import (
 
 	transfertypes "github.com/cosmos/ibc-go/v8/modules/apps/transfer/types"
 
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/utils"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/utils"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 
-	"github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/x/erc20"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	"github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/x/erc20"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 type GenesisTestSuite struct {

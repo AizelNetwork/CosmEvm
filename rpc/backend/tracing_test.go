@@ -4,6 +4,10 @@ import (
 	"fmt"
 
 	"cosmossdk.io/log"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	"github.com/AizelNetwork/CosmEvm/indexer"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend/mocks"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	tmrpctypes "github.com/cometbft/cometbft/rpc/core/types"
 	"github.com/cometbft/cometbft/types"
@@ -11,10 +15,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	"github.com/AizelNetwork/evmos/v20/indexer"
-	"github.com/AizelNetwork/evmos/v20/rpc/backend/mocks"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestTraceTransaction() {

@@ -14,7 +14,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/types"
 )
 
 // InitConfig adds the chain-id, encoding and output flags to the persistent flag set.

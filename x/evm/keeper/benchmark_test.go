@@ -4,7 +4,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/AizelNetwork/evmos/v20/x/evm/keeper/testdata"
+	"github.com/AizelNetwork/CosmEvm/x/evm/keeper/testdata"
 
 	sdkmath "cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
@@ -13,10 +13,10 @@ import (
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	"github.com/ethereum/go-ethereum/common"
 
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/x/evm/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func SetupContract(b *testing.B) (*KeeperTestSuite, common.Address) {

@@ -14,7 +14,7 @@ import (
 	"runtime"
 
 	gethaccounts "github.com/ethereum/go-ethereum/accounts"
-	"github.com/AizelNetwork/evmos/v20/wallets/accounts"
+	"github.com/AizelNetwork/CosmEvm/wallets/accounts"
 	usb "github.com/zondax/hid"
 )
 

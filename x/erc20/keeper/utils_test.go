@@ -3,14 +3,14 @@ package keeper_test
 import (
 	"math/big"
 
+	"github.com/AizelNetwork/CosmEvm/contracts"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/keeper/testdata"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evm "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/AizelNetwork/evmos/v20/contracts"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/keeper/testdata"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evm "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 // MintFeeCollector mints some coins to the fee collector address.

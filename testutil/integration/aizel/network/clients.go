@@ -3,6 +3,12 @@
 package network
 
 import (
+	epochstypes "github.com/AizelNetwork/CosmEvm/x/epochs/types"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
+	infltypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
+	vestingtypes "github.com/AizelNetwork/CosmEvm/x/vesting/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module/testutil"
@@ -16,12 +22,6 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	epochstypes "github.com/AizelNetwork/evmos/v20/x/epochs/types"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
-	infltypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
-	vestingtypes "github.com/AizelNetwork/evmos/v20/x/vesting/types"
 )
 
 func getQueryHelper(ctx sdktypes.Context, encCfg testutil.TestEncodingConfig) *baseapp.QueryServiceTestHelper {

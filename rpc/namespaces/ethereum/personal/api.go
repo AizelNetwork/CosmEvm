@@ -8,10 +8,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/AizelNetwork/evmos/v20/rpc/backend"
+	"github.com/AizelNetwork/CosmEvm/rpc/backend"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/hd"
-	"github.com/AizelNetwork/evmos/v20/types"
+	"github.com/AizelNetwork/CosmEvm/crypto/hd"
+	"github.com/AizelNetwork/CosmEvm/types"
 
 	"cosmossdk.io/log"
 
@@ -23,7 +23,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // PrivateAccountAPI is the personal_ prefixed set of APIs in the Web3 JSON-RPC spec.

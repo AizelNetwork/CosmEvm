@@ -19,9 +19,9 @@ import (
 	ibcgotesting "github.com/cosmos/ibc-go/v8/testing"
 	"github.com/cosmos/ibc-go/v8/testing/mock"
 
-	"github.com/AizelNetwork/evmos/v20/crypto/ethsecp256k1"
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	"github.com/AizelNetwork/evmos/v20/utils"
+	"github.com/AizelNetwork/CosmEvm/crypto/ethsecp256k1"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	"github.com/AizelNetwork/CosmEvm/utils"
 )
 
 // ChainIDPrefix defines the default chain ID prefix for Evmos test chains

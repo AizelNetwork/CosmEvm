@@ -6,14 +6,14 @@ import (
 	"fmt"
 
 	errorsmod "cosmossdk.io/errors"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
 	abcitypes "github.com/cometbft/cometbft/abci/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	testutiltypes "github.com/cosmos/cosmos-sdk/types/module/testutil"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
 )
 
 // BaseTxFactory is the interface that wraps the common methods to build and broadcast transactions

@@ -7,15 +7,15 @@ import (
 
 	storetypes "cosmossdk.io/store/types"
 
+	"github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/factory"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/grpc"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	integrationutils "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/utils"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/factory"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/grpc"
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	integrationutils "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/utils"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (suite *EvmAnteTestSuite) TestCheckGasWanted() {

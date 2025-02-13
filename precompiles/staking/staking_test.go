@@ -4,22 +4,22 @@ import (
 	"math/big"
 	"time"
 
-	testkeyring "github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
+	testkeyring "github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
 
 	"cosmossdk.io/math"
 
+	"github.com/AizelNetwork/CosmEvm/x/evm/core/vm"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/AizelNetwork/evmos/v20/x/evm/core/vm"
 
+	"github.com/AizelNetwork/CosmEvm/app"
+	"github.com/AizelNetwork/CosmEvm/precompiles/authorization"
+	"github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	"github.com/AizelNetwork/CosmEvm/x/evm/statedb"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/AizelNetwork/evmos/v20/app"
-	"github.com/AizelNetwork/evmos/v20/precompiles/authorization"
-	"github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	"github.com/AizelNetwork/evmos/v20/x/evm/statedb"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
 )
 
 func (s *PrecompileTestSuite) TestIsTransaction() {

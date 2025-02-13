@@ -8,7 +8,7 @@ import (
 	"time"
 
 	// TODO update import to local pkg when rpc pkg is migrated
-	"github.com/AizelNetwork/evmos/v20/server/config"
+	"github.com/AizelNetwork/CosmEvm/server/config"
 	"github.com/gorilla/mux"
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
 	"github.com/spf13/cobra"

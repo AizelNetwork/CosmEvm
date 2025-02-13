@@ -5,7 +5,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/x/vesting/types"
+	"github.com/AizelNetwork/CosmEvm/x/vesting/types"
 )
 
 // HasGovClawbackDisabled checks if the given account has governance clawback disabled.

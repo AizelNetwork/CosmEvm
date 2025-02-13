@@ -7,7 +7,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 var _ types.QueryServer = Keeper{}

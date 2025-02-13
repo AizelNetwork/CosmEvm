@@ -3,12 +3,12 @@ package ante_test
 import (
 	"testing"
 
-	ethante "github.com/AizelNetwork/evmos/v20/app/ante/evm"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	"github.com/AizelNetwork/evmos/v20/types"
+	ethante "github.com/AizelNetwork/CosmEvm/app/ante/evm"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	"github.com/AizelNetwork/CosmEvm/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/AizelNetwork/evmos/v20/app/ante"
+	"github.com/AizelNetwork/CosmEvm/app/ante"
 )
 
 func TestValidateHandlerOptions(t *testing.T) {

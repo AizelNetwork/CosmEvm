@@ -14,7 +14,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/math"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	contractutils "github.com/AizelNetwork/evmos/v20/contracts/utils"
+	contractutils "github.com/AizelNetwork/CosmEvm/contracts/utils"
 )
 
 // MakeTopic converts a filter query argument into a filter topic.

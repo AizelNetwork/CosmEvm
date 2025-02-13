@@ -8,8 +8,8 @@ import (
 
 	length "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 
-	utiltx "github.com/AizelNetwork/evmos/v20/testutil/tx"
-	"github.com/AizelNetwork/evmos/v20/x/erc20/types"
+	utiltx "github.com/AizelNetwork/CosmEvm/testutil/tx"
+	"github.com/AizelNetwork/CosmEvm/x/erc20/types"
 )
 
 type ProposalTestSuite struct {

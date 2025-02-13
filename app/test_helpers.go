@@ -26,10 +26,10 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
-	feemarkettypes "github.com/AizelNetwork/evmos/v20/x/feemarket/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
+	feemarkettypes "github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 
-	"github.com/AizelNetwork/evmos/v20/cmd/config"
+	"github.com/AizelNetwork/CosmEvm/cmd/config"
 )
 
 // DefaultTestingAppInit defines the IBC application used for testing

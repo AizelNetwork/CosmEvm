@@ -6,7 +6,7 @@ package types
 import (
 	"fmt"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 var DefaultTokenPairs = []TokenPair{

@@ -6,7 +6,7 @@ package types
 import (
 	"cosmossdk.io/math"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 )
 
 const (

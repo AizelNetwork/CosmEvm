@@ -6,9 +6,9 @@ import (
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/precompiles/staking"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/keyring"
-	inflationtypes "github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	"github.com/AizelNetwork/CosmEvm/precompiles/staking"
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/keyring"
+	inflationtypes "github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 type stakingRewards struct {

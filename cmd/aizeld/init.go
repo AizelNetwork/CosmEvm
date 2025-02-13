@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"time"
 
-	aizeltypes "github.com/AizelNetwork/evmos/v20/types"
+	aizeltypes "github.com/AizelNetwork/CosmEvm/types"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 

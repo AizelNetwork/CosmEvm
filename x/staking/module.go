@@ -15,7 +15,7 @@ import (
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/AizelNetwork/evmos/v20/x/staking/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/staking/keeper"
 )
 
 var (

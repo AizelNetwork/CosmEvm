@@ -14,10 +14,10 @@ import (
 	"github.com/cosmos/gogoproto/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 
-	enccodec "github.com/AizelNetwork/evmos/v20/encoding/codec"
-	"github.com/AizelNetwork/evmos/v20/ethereum/eip712"
-	erc20types "github.com/AizelNetwork/evmos/v20/x/erc20/types"
-	evmtypes "github.com/AizelNetwork/evmos/v20/x/evm/types"
+	enccodec "github.com/AizelNetwork/CosmEvm/encoding/codec"
+	"github.com/AizelNetwork/CosmEvm/ethereum/eip712"
+	erc20types "github.com/AizelNetwork/CosmEvm/x/erc20/types"
+	evmtypes "github.com/AizelNetwork/CosmEvm/x/evm/types"
 )
 
 // encodingConfig creates a new EncodingConfig and returns it

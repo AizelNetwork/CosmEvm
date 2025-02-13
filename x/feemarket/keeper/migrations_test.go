@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"testing"
 
+	"github.com/AizelNetwork/CosmEvm/testutil/integration/aizel/network"
+	feemarketkeeper "github.com/AizelNetwork/CosmEvm/x/feemarket/keeper"
+	"github.com/AizelNetwork/CosmEvm/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/testutil/integration/aizel/network"
-	feemarketkeeper "github.com/AizelNetwork/evmos/v20/x/feemarket/keeper"
-	"github.com/AizelNetwork/evmos/v20/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 

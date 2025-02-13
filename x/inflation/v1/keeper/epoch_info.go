@@ -5,7 +5,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AizelNetwork/evmos/v20/x/inflation/v1/types"
+	"github.com/AizelNetwork/CosmEvm/x/inflation/v1/types"
 )
 
 // GetEpochIdentifier gets the epoch identifier
