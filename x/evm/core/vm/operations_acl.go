@@ -272,7 +272,7 @@ func gasMCopy(
 	}
 	// The memoryGasCost function is used to see if we need to expand memory
 	// beyond 'memorySize' up to 'maxEnd'.
-	memGas, err := memoryGasCost(mem, memorySize)
+	memGas, err := memoryGasCost(mem, maxEnd)
 	if err != nil {
 		return 0, err
 	}

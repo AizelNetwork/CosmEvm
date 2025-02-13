@@ -225,7 +225,7 @@ func enable5656(jt *JumpTable) {
 		// This function will be called when EVM executes opcode 0x5E
 		execute:     opMCopy,        // see next snippet
 		dynamicGas:  gasMCopy,       // if you want a custom dynamic gas calc
-		constantGas: GasQuickStep,   // or GasQuickStep, etc. if you prefer
+		constantGas: 0,              // or GasQuickStep, etc. if you prefer
 		minStack:    minStack(3, 0), // MCOPY pops 3 items (length, src, dst)
 		maxStack:    maxStack(3, 0),
 	}
