@@ -9,6 +9,7 @@ aizeld start \
 	--log_level $LOGLEVEL \
 	--minimum-gas-prices=0.0001$BASE_DENOM \
 	--json-rpc.api eth,txpool,personal,net,debug,web3 \
+	--evm.tracer json \
 	--home "$AIZELHOME/node1" \
 	--chain-id "$CHAINID" \
 	 > $AIZELHOME/node1/node1.log 2>&1 &

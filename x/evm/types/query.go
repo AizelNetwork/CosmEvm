@@ -9,11 +9,27 @@ import (
 // UnpackInterfaces implements UnpackInterfacesMessage.UnpackInterfaces
 func (m QueryTraceTxRequest) UnpackInterfaces(unpacker codectypes.AnyUnpacker) error {
 	for _, msg := range m.Predecessors {
-		if err := msg.UnpackInterfaces(unpacker); err != nil {
+		if msg != nil {
+			if err := msg.UnpackInterfaces(unpacker); err != nil {
+				return err
+			}
+		}
+	}
+	if m.Msg != nil {
+		if err := m.Msg.UnpackInterfaces(unpacker); err != nil {
 			return err
 		}
 	}
-	return m.Msg.UnpackInterfaces(unpacker)
+	// Only attempt to unpack TraceConfig if it implements the interface.
+	if m.TraceConfig != nil {
+		if uim, ok := interface{}(m.TraceConfig).(codectypes.UnpackInterfacesMessage); ok {
+			if err := uim.UnpackInterfaces(unpacker); err != nil {
+				return err
+			}
+		}
+		// Otherwise, if TraceConfig doesn't require unpacking, do nothing.
+	}
+	return nil
 }
 
 func (m QueryTraceBlockRequest) UnpackInterfaces(unpacker codectypes.AnyUnpacker) error {
