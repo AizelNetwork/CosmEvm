@@ -237,11 +237,11 @@ func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]by
 	val := scope.Stack.Pop()  // Pop length
 	length := (&val).Uint64() // Extract length
 
-	val2 := scope.Stack.Pop() // Pop src
-	src := (&val2).Uint64()   // Extract source offset
+	val2 := scope.Stack.Pop() // Pop dst
+	dst := (&val2).Uint64()   // Extract source offset
 
-	val3 := scope.Stack.Pop() // Pop dst
-	dst := (&val3).Uint64()   // Extract destination offset
+	val3 := scope.Stack.Pop() // Pop src
+	src := (&val3).Uint64()   // Extract destination offset
 
 	// If length == 0, no copying needed; just return.
 	if length == 0 {
@@ -277,7 +277,7 @@ func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]by
 	}
 
 	// Write to memory at [dst..dst+length]
-	//scope.Memory.Set(dst, length, srcData)
+	scope.Memory.Set(dst, length, srcData)
 
 	// Log the details of the copy operation
 	fmt.Printf("MCOPY: Successfully copied length=%d, from src=%d to dst=%d\n", length, src, dst)
