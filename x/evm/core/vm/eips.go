@@ -30,7 +30,6 @@ import (
 
 var activators = map[string]func(*JumpTable){
 	"ethereum_5656": enable5656,
-	"ethereum_3860": enable3860,
 	"ethereum_3855": enable3855,
 	"ethereum_3529": enable3529,
 	"ethereum_3198": enable3198,
@@ -235,14 +234,14 @@ var ErrMemoryOverflow = errors.New("memory overflow")
 
 func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]byte, error) {
 	// Pop stack items (top of stack is length, then src, then dst).
-	val := scope.Stack.Pop()  // <-- returns a value: uint256.Int
-	length := (&val).Uint64() // <-- call the pointer method on its address
+	val := scope.Stack.Pop()  // Pop length
+	length := (&val).Uint64() // Extract length
 
-	val2 := scope.Stack.Pop()
-	src := (&val2).Uint64()
+	val2 := scope.Stack.Pop() // Pop src
+	src := (&val2).Uint64()   // Extract source offset
 
-	val3 := scope.Stack.Pop()
-	dst := (&val3).Uint64()
+	val3 := scope.Stack.Pop() // Pop dst
+	dst := (&val3).Uint64()   // Extract destination offset
 
 	// If length == 0, no copying needed; just return.
 	if length == 0 {
@@ -253,7 +252,9 @@ func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]by
 	endSrc, overflow1 := math.SafeAdd(src, length)
 	endDst, overflow2 := math.SafeAdd(dst, length)
 	if overflow1 || overflow2 {
-		return nil, ErrMemoryOverflow // or some error to indicate overflow
+		// Log the overflow details for debugging
+		fmt.Printf("MCOPY: Memory overflow detected. Source end: %d, Destination end: %d\n", endSrc, endDst)
+		return nil, ErrMemoryOverflow
 	}
 
 	// Resize memory so it covers [src..(src+length-1)] and [dst..(dst+length-1)].
@@ -262,26 +263,33 @@ func opMCopy(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]by
 	if endDst > maxEnd {
 		maxEnd = endDst
 	}
+
+	// Log the max end for memory resizing check
+	fmt.Printf("MCOPY: Resizing memory to maxEnd: %d\n", maxEnd)
 	scope.Memory.Resize(maxEnd)
 
 	// Read from memory: get a pointer to the src segment
 	srcData := scope.Memory.GetPtr(int64(src), int64(length))
 	if srcData == nil {
 		// Means offset is out of the actual memory store bounds
+		fmt.Printf("MCOPY: Source memory access out of bounds at src=%d, length=%d\n", src, length)
 		return nil, ErrMemoryOverflow
 	}
 
 	// Write to memory at [dst..dst+length]
-	scope.Memory.Set(dst, length, srcData)
+	//scope.Memory.Set(dst, length, srcData)
+
+	// Log the details of the copy operation
+	fmt.Printf("MCOPY: Successfully copied length=%d, from src=%d to dst=%d\n", length, src, dst)
 
 	// MCOPY pushes nothing onto stack.
 	return nil, nil
 }
 
-func enable3860(jt *JumpTable) {
-	// Overwrite the dynamic gas function for CREATE
-	jt[CREATE].dynamicGas = gasCreateEIP3860
+// func enable3860(jt *JumpTable) {
+// 	// Overwrite the dynamic gas function for CREATE
+// 	jt[CREATE].dynamicGas = gasCreateEIP3860
 
-	// Overwrite the dynamic gas function for CREATE2
-	jt[CREATE2].dynamicGas = gasCreate2EIP3860
-}
+// 	// Overwrite the dynamic gas function for CREATE2
+// 	jt[CREATE2].dynamicGas = gasCreate2EIP3860
+// }

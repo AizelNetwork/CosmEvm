@@ -18,6 +18,7 @@ package vm
 
 import (
 	"errors"
+	"fmt"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
@@ -264,6 +265,7 @@ func gasMCopy(
 	endDst, overflow1 := math.SafeAdd(dst, length)
 	endSrc, overflow2 := math.SafeAdd(src, length)
 	if overflow1 || overflow2 {
+		fmt.Printf("MCOPY: gas Over flow 1\n")
 		return 0, ErrGasUintOverflow
 	}
 	maxEnd := endDst
@@ -274,6 +276,7 @@ func gasMCopy(
 	// beyond 'memorySize' up to 'maxEnd'.
 	memGas, err := memoryGasCost(mem, maxEnd)
 	if err != nil {
+		fmt.Printf("MCOPY: gas Over flow 2\n")
 		return 0, err
 	}
 
@@ -282,14 +285,17 @@ func gasMCopy(
 	const copyGasPerByte = 3
 	copyCost, overflow3 := math.SafeMul(copyGasPerByte, length)
 	if overflow3 {
+		fmt.Printf("MCOPY: gas Over flow 3\n")
 		return 0, ErrGasUintOverflow
 	}
 
 	// Combine memory expansion + copy cost
 	totalGas, overflow4 := math.SafeAdd(memGas, copyCost)
 	if overflow4 {
+		fmt.Printf("MCOPY: gas Over flow 4\n")
 		return 0, ErrGasUintOverflow
 	}
+	fmt.Printf("MCOPY: endSrc=%d, endDst=%d, maxEnd=%d\n", endSrc, endDst, maxEnd)
 	return totalGas, nil
 }
 
