@@ -220,16 +220,16 @@ EOF
 		sed -i '' 's/:8545/:18545/g' "$APP_TOML"
 		sed -i '' 's/:8546/:18546/g' "$APP_TOML"
 		sed -i '' 's/:6065/:16065/g' "$APP_TOML"
-		sed -i '' 's/:26657/:56657/g' "$APP_TOML"
+		# sed -i '' 's/:26657/:56657/g' "$APP_TOML"
 
 		# 11,12,13,14,15 (ports in config + client)
-		sed -i '' 's/:26657/:56657/g' "$CONFIG"
+		# sed -i '' 's/:26657/:56657/g' "$CONFIG"
 		sed -i '' 's/:26658/:56658/g' "$CONFIG"
 		sed -i '' 's/:6060/:16060/g' "$CONFIG"
 		sed -i '' 's/:26656/:56656/g' "$CONFIG"
 		sed -i '' 's/:26660/:56660/g' "$CONFIG"
 		# Also client
-		sed -i '' 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
+		# sed -i '' 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
 
 		# 4: cors_allowed_origins = ["*"] in config
 		sed -i '' 's#^cors_allowed_origins = .*#cors_allowed_origins = ["*"]#' "$CONFIG"
@@ -255,16 +255,16 @@ EOF
 		sed -i 's/:8545/:18545/g' "$APP_TOML"
 		sed -i 's/:8546/:18546/g' "$APP_TOML"
 		sed -i 's/:6065/:16065/g' "$APP_TOML"
-		sed -i 's/:26657/:56657/g' "$APP_TOML"
+		# sed -i 's/:26657/:56657/g' "$APP_TOML"
 
 		# 11,12,13,14,15 (ports in config + client)
-		sed -i 's/:26657/:56657/g' "$CONFIG"
+		# sed -i 's/:26657/:56657/g' "$CONFIG"
 		sed -i 's/:26658/:56658/g' "$CONFIG"
 		sed -i 's/:6060/:16060/g' "$CONFIG"
 		sed -i 's/:26656/:56656/g' "$CONFIG"
 		sed -i 's/:26660/:56660/g' "$CONFIG"
 		# Also client
-		sed -i 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
+		# sed -i 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
 
 		# 4: cors_allowed_origins = ["*"] in config
 		sed -i 's#^cors_allowed_origins = .*#cors_allowed_origins = ["*"]#' "$CONFIG"

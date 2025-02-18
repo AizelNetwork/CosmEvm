@@ -1,83 +1,13 @@
-## 0. Server Environment Setup
+## 1. Prerequisites
 
-### 0.1. Configure Environment Variables
+We need to prepare migration script first and using upgrade cli to manipulate it.
 
-Before you begin, you must set some key environment variables. In particular, configure your home directory for Aizel (the location where node configuration and data are stored). For example, add the following lines to your shell profile (e.g. `~/.bash_profile`, `~/.bashrc`, or `~/.zshrc`):
-
-```bash
-# Base directory for Aizel node configurations
-export AIZELHOME=$HOME/.cosmos/aizeld
-
-# (Optional) Set your chain ID if you want to override the default in scripts:
-export CHAIN_ID=aizel_2015-3333
-```
-
-Then reload your shell configuration:
-
-```bash
-source ~/.bash_profile
-```
-
-### 0.2. Install Go
-
-1. **Download and Install Go**
-
-   Visit [golang.org/dl](https://golang.org/dl/) and download the latest stable version for your OS. For example, on Linux you can run:
-
-   ```bash
-   wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
-   sudo tar -C /usr/local -xzf go1.23.6.linux-amd64.tar.gz
-   ```
-
-2. **Set Up Go Environment Variables**
-
-   Add these lines to your shell profile (if not already present):
-
-   ```bash
-   # Go installation paths
-   export GOROOT=/usr/local/go
-   export GOPATH=$HOME/go
-   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-   ```
-
-   Reload your shell configuration:
-
-   ```bash
-   source ~/.bash_profile
-   ```
-
-3. **Verify Go Installation**
-
-   Check that Go is installed and the environment is configured:
-
-   ```bash
-   go version
-   echo $GOROOT
-   echo $GOPATH
-   ```
-
-### 0.3. Install Additional Dependencies
-
-If you run into issues (for example, an error about OpenBLAS linker flags), unset the conflicting environment variables before building:
-
-```bash
-unset LDFLAGS
-unset CFLAGS
-```
-
----
-
-## 1. Build the Customized Blockchain Binary
-
-We now build our customized blockchain based on our forked repository.
-
-1. **Clone the Repository**
+1. **Get upgrade module-versions**
 
    Clone our forked repository:
 
    ```bash
-   git clone git@github.com:AizelNetwork/CosmEvm.git
-   cd CosmEvm
+   aizeld query upgrade module-versions
    ```
 
 2. **Build and Install the Binary**
