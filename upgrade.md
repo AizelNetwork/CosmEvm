@@ -1,152 +1,99 @@
-## 1. Prerequisites
-
 We need to prepare migration script first and using upgrade cli to manipulate it.
 
-1. **Get upgrade module-versions**
+## 1. **Get upgrade module-versions**
 
    Clone our forked repository:
 
    ```bash
    aizeld query upgrade module-versions
    ```
+  check the version with module name is "evm"
 
-2. **Build and Install the Binary**
+## 2. **Write a New EVM Migration (v9)**
 
-   Use the provided Makefile to build and install the binary:
+   Create a new migration package (for example, x/evm/migrations/v9) that contains a migration function which transforms the stored state from the old version (v8) to your new version (v9) with your added EIP‑5656 changes (MCOPY opcode support).
 
-   ```bash
-   make install
-   ```
+## 3. **Write a New Upgrade**
 
-   > **Tip:** If you run into issues related to linker flags, run the `unset LDFLAGS` and `unset CFLAGS` commands before `make install`.
+   Mae the upgrade file in app/upgrades/evm-v9/upgrades.go
 
----
+## 4. **Register the Upgrade Handle**
+In your application’s upgrade setup function (often called setupUpgradeHandlers() in your app file), register the new handler. For example, if your application holds the evm store key in a field (say, app.keys[evmtypes.StoreKey]), you would do something like:
+```golang
+   func (app *Evmos) setupUpgradeHandlers() {
+    // v20 upgrade handler (existing)
+    app.UpgradeKeeper.SetUpgradeHandler(
+        v20.UpgradeName,
+        v20.CreateUpgradeHandler(app.mm, app.configurator, app.AccountKeeper, app.EvmKeeper, app.appCodec),
+    )
 
-## 2. Configure Node1
+    // EVM v9 upgrade handler
+    app.UpgradeKeeper.SetUpgradeHandler(
+        v9.UpgradeName,
+        v9.CreateUpgradeHandler(app.mm, app.configurator, app.AccountKeeper, app.EvmKeeper, app.appCodec, app.keys[evmtypes.StoreKey]),
+    )
 
-### 2.1. Generate Bech32 Format Addresses from EVM Cold Wallets
+    // (Other upgrade handling code...)
+}
+```
 
-Your chain uses Bech32‑formatted addresses. For any external (cold wallet) EVM address you want to fund, convert the EVM hex address into Bech32 with the following command:
+## 5. **Schedule the Upgrade via governance**
+
+Below is an example of how you can schedule a software upgrade via governance on a Cosmos‑SDK–based chain (like your Evmos‑based chain). In Cosmos‑SDK, you do this by submitting a **SoftwareUpgradeProposal** via the governance module. When the proposal passes, the upgrade plan (with your upgrade name and target block height) is set, and when that block is reached the upgrade handler is triggered.
+
+### 1. Create a Proposal JSON File
+
+Create a JSON file (for example, `evm-v9-upgrade-proposal.json`) with the following content. Adjust the parameters (title, description, height, info URL, deposit amounts) to your requirements:
+
+```json
+{
+  "title": "Upgrade EVM Module to v9 (EIP-5656)",
+  "description": "This proposal upgrades the EVM module to v9 to enable EIP-5656 (the MCOPY opcode). This upgrade includes the necessary state migrations.",
+  "plan": {
+    "name": "evm-v9",
+    "height": "1234567",
+    "info": "https://github.com/YourRepo/YourUpgradeInfo"
+  }
+}
+```
+
+*Notes:*
+- **name:** Must match the upgrade name you registered in your upgrade handler (e.g. `"evm-v9"`).
+- **height:** Specify the block height at which the upgrade should take effect.
+- **info:** A URL pointing to additional upgrade details (this is optional but recommended).
+
+### 2. Submit the Proposal via CLI
+
+Use the governance transaction command to submit your proposal. For example, using your chain’s CLI (here assumed to be `aizeld`):
 
 ```bash
-aizeld debug addr [evm-address]
+aizeld tx gov submit-proposal software-upgrade evm-v9-upgrade-proposal.json \
+  --from <your-key> \
+  --deposit 1000000stake \
+  --chain-id <your-chain-id> \
+  --fees 200000stake \
+  --yes
 ```
 
-For example:
+Replace:
+- `<your-key>` with your key or account name.
+- `<your-chain-id>` with your chain ID.
+- The deposit and fee amounts with values appropriate for your chain’s parameters.
+
+### 3. Vote on the Proposal
+
+Once the proposal is submitted, make sure that enough votes are cast for it to pass. You can check the proposal status with:
 
 ```bash
-aizeld debug addr 0xaaafB3972B05630fCceE866eC69CdADd9baC2771
+aizeld query gov proposal <proposal-id>
 ```
 
-This outputs something like:
-
-```
-Address bytes: [170 175 179 151 43 5 99 15 204 238 134 110 198 156 218 221 155 172 39 113]
-Bech32 Acc: aizel142hm89etq43sln8wsehvd8x6mkd6cfm35279kg
-Bech32 Val: aizelvaloper142hm89etq43sln8wsehvd8x6mkd6cfm3k9mj49
-```
-
-Use the **Bech32 Acc** address (starting with `aizel1`) for allocating genesis coins to your external wallets. Update the addresses for `USER1`, `USER2`, `USER3`, and `USER4` in your production script (`prod_node1.sh`) accordingly.
-
-### 2.2. Customize Validator Mnemonics
-
-In your production initialization script (`prod_node1.sh`), you will see variables such as `VAL1_MNEMONIC` and `VAL2_MNEMONIC`. **These are sample mnemonics provided for testing purposes only.**  
-For production, **customize these values** with your own secure mnemonic phrases:
+Then, vote on the proposal if necessary:
 
 ```bash
-VAL1_MNEMONIC="your secure mnemonic for validator1 goes here"
-VAL2_MNEMONIC="your secure mnemonic for validator2 goes here"
+aizeld tx gov vote <proposal-id> yes --from <your-key> --chain-id <your-chain-id> --fees 200000stake --yes
 ```
 
-Make sure to keep these mnemonics safe and never share them publicly.
+### 4. Upgrade Execution
 
-### 2.3. Initialize Node1
-
-Run your production initialization script for node1:
-
-```bash
-./prod_node1.sh
-```
-
-Your `prod_node1.sh` should perform tasks such as:
-- Setting client configuration (chain-id, keyring, etc.)
-- Importing validator keys using your custom mnemonics
-- Initializing the node (`aizeld init`)
-- Adjusting denominations in the genesis file
-- Allocating genesis accounts (using your Bech32 addresses)
-- Generating a gentx for validator1
-
-After running the script, verify the genesis file:
-
-```bash
-aizeld validate-genesis --home $AIZELHOME/node1
-```
-
----
-
-## 3. Configure Node2
-
-Your production script for node2 (`prod_node2.sh`) creates a second node by copying the node1 folder and then modifying settings. It also signs a gentx for validator2.
-
-- Deleting any existing node2 folder  
-- Copying node1’s folder to node2  
-- Changing file ownership (so your user can modify them)  
-- Updating ports, node name, and persistent peers  
-- Signing validator2’s gentx  
-- Copying the gentx files from node2 back into node1  
-
-```bash
-./prod_node2.sh
-```
-
-> **Reminder:** Update your validator mnemonics in your production scripts (e.g. in `prod_node1.sh` and any related configuration files) with your own secure values.
-
----
-
-## 4. Collect Genesis Transactions
-
-After node1 and node2 have signed their gentxs, run the genesis collection script to aggregate all gentx files and update the genesis file.
-
-Create a script called `collect-gentxs.sh` (or update your existing one) with the following content:
-
-```bash
-./collect-gentxs.sh
-```
-
----
-
-## 5. Start the Nodes
-
-Create a start script (`start-nodes.sh`) that starts both nodes. For example:
-
-```bash
-./start-nodes.sh
-```
-
----
-
-## 6. Test Your Chain
-
-After the nodes have started, test your blockchain by retrieving the current block number via the JSON‑RPC endpoint:
-
-```bash
-curl -X POST \
-  -H "Content-Type: application/json" \
-  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
-  http://localhost:18545
-```
-
-You should receive a JSON response with the block number (in hexadecimal).
-
----
-
-## FAQ
-
-**Q:** *I encountered an issue when running `make install` regarding OpenBLAS linker flags.*  
-**A:** Unset the conflicting environment variables before building:
-
-```bash
-unset LDFLAGS
-unset CFLAGS
-```
----
+When the chain reaches the specified block height, the upgrade handler will be triggered automatically. Your new binary (compiled with the evm‑v9 changes) must be running at that point so that the migration code (for example, enabling EIP‑5656) is executed.
