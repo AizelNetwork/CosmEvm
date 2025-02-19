@@ -41,7 +41,7 @@ sed -i.bak 's/name "node1"/name "node2"/g' "$APP_TOML"
 sed -i.bak 's/:11317/:11327/g' "$APP_TOML"
 sed -i.bak 's/:18545/:18555/g' "$APP_TOML"
 sed -i.bak 's/:18546/:18566/g' "$APP_TOML"
-sed -i.bak 's/:56657/:56667/g' "$APP_TOML"
+sed -i.bak 's/:26657/:56667/g' "$APP_TOML"
 sed -i.bak 's/:56658/:56668/g' "$APP_TOML"
 sed -i.bak 's/:56656/:56666/g' "$APP_TOML"
 sed -i.bak 's/:16065/:16075/g' "$APP_TOML"
@@ -54,7 +54,7 @@ echo "Updating config.toml and client.toml settings for node2..."
 # Update ports in config.toml and client.toml
 for file in "$CONFIG_TOML" "$CLIENT_TOML"; do
   sed -i.bak 's/:56656/:56666/g' "$file"
-  sed -i.bak 's/:56657/:56667/g' "$file"
+  sed -i.bak 's/:26657/:56667/g' "$file"
   sed -i.bak 's/:56658/:56668/g' "$file"
   sed -i.bak 's/:16060/:16070/g' "$file"
 done

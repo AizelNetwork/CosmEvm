@@ -1,0 +1,20 @@
+{
+ "messages": [
+  {
+   "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+   "authority": "aizel10d07y265gmmuvt4z0w9aw880jnsr700jkp33vy",
+   "plan": {
+    "name": "evm-v9-upgrade",
+    "time": "2015-02-20T00:00:00Z",
+    "height": "10000",
+    "info": "",
+    "upgraded_client_state": null
+   }
+  }
+ ],
+ "metadata": "ipfs://CID",
+ "deposit": "1000000aaizel",
+ "title": "Upgrade EVM to v9",
+ "summary": "This upgrade enables the new EIP-5656 opcode (MCOPY) and other EVM improvements.",
+ "expedited": false
+}

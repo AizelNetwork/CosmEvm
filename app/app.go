@@ -141,6 +141,7 @@ import (
 	"github.com/AizelNetwork/CosmEvm/app/ante"
 	ethante "github.com/AizelNetwork/CosmEvm/app/ante/evm"
 	"github.com/AizelNetwork/CosmEvm/app/post"
+	v9 "github.com/AizelNetwork/CosmEvm/app/upgrades/evm-v9"
 	v20 "github.com/AizelNetwork/CosmEvm/app/upgrades/v20"
 	srvflags "github.com/AizelNetwork/CosmEvm/server/flags"
 	"github.com/AizelNetwork/CosmEvm/x/erc20"
@@ -1201,6 +1202,12 @@ func (app *Evmos) setupUpgradeHandlers() {
 			app.AccountKeeper,
 			app.EvmKeeper,
 		),
+	)
+
+	// EVM v9 upgrade handler
+	app.UpgradeKeeper.SetUpgradeHandler(
+		v9.UpgradeName,
+		v9.CreateUpgradeHandler(app.mm, app.configurator, app.AccountKeeper, app.EvmKeeper, app.appCodec, app.keys[evmtypes.StoreKey]),
 	)
 
 	// When a planned update height is reached, the old binary will panic

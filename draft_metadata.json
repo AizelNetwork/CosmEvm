@@ -1,0 +1,10 @@
+{
+ "title": "Upgrade EVM to v9",
+ "authors": [
+  "validator1"
+ ],
+ "summary": "This upgrade enables the new EIP-5656 opcode (MCOPY) and other EVM improvements.",
+ "details": "This upgrade enables the new EIP-5656 opcode (MCOPY) and other EVM improvements.",
+ "proposal_forum_url": "https://eips.ethereum.org/EIPS/eip-5656",
+ "vote_option_context": "yes or no"
+}
