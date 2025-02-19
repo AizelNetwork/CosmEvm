@@ -15,7 +15,7 @@ We need to prepare migration script first and using upgrade cli to manipulate it
 
 ## 3. **Write a New Upgrade**
 
-   Mae the upgrade file in app/upgrades/evm-v9/upgrades.go
+   Build the upgrade file in app/upgrades/evm-v9/upgrades.go
 
 ## 4. **Register the Upgrade Handle**
 In your application’s upgrade setup function (often called setupUpgradeHandlers() in your app file), register the new handler. For example, if your application holds the evm store key in a field (say, app.keys[evmtypes.StoreKey]), you would do something like:
