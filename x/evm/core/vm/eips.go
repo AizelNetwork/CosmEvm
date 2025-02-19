@@ -29,7 +29,7 @@ import (
 )
 
 var activators = map[string]func(*JumpTable){
-	//	"ethereum_5656": enable5656,
+	"ethereum_5656": enable5656,
 	"ethereum_3855": enable3855,
 	"ethereum_3529": enable3529,
 	"ethereum_3198": enable3198,
