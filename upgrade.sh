@@ -4,10 +4,11 @@ BASE_DENOM="aaizel"
 VAL1_KEY="validator1"
 # Submit Proposal
 aizeld tx gov submit-proposal "$AIZELHOME/evm-v9-upgrade-proposal.json" \
-  --fees 4430808153$BASE_DENOM \
+  --fees 154308081530000$BASE_DENOM \
   --home "$AIZELHOME/node1" \
   --chain-id "$CHAINID" \
   --from "$VAL1_KEY" \
+  --gas 300000 \
   --yes \
   > "$AIZELHOME/submit-proposal.log"
 

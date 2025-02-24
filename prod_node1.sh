@@ -138,13 +138,13 @@ EOF
 	jq --arg base_denom "$BASE_DENOM" '.app_state["inflation"]["params"]["mint_denom"]=$base_denom' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# Set gas limit in genesis
-	jq '.consensus_params["block"]["max_gas"]="10000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.consensus_params["block"]["max_gas"]="40000000"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# Set base fee in genesis
 	jq '.app_state["feemarket"]["params"]["base_fee"]="'${BASEFEE}'"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# CHANGED: Update evm.params.extra_eips to include "ethereum_5656"
-	jq '.app_state["evm"]["params"]["extra_eips"] = ["ethereum_3855","ethereum_5656"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["evm"]["params"]["extra_eips"] = ["ethereum_3855"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# CHANGED: Set swagger = true in app.toml
 	sed -i.bak 's/swagger = false/swagger = true/g' "$APP_TOML"
@@ -215,19 +215,19 @@ EOF
 		sed -i '' 's/^pruning = .*/pruning = "nothing"/' "$APP_TOML"
 
 		# 6,7,8,9,10,11 (ports in app)
-		sed -i '' 's/:1317/:11317/g' "$APP_TOML"
-		sed -i '' 's/:9090/:19090/g' "$APP_TOML"
-		sed -i '' 's/:8545/:18545/g' "$APP_TOML"
-		sed -i '' 's/:8546/:18546/g' "$APP_TOML"
-		sed -i '' 's/:6065/:16065/g' "$APP_TOML"
+		# sed -i '' 's/:1317/:11317/g' "$APP_TOML"
+		# sed -i '' 's/:9090/:19090/g' "$APP_TOML"
+		# sed -i '' 's/:8545/:18545/g' "$APP_TOML"
+		# sed -i '' 's/:8546/:18546/g' "$APP_TOML"
+		# sed -i '' 's/:6065/:16065/g' "$APP_TOML"
 		# sed -i '' 's/:26657/:56657/g' "$APP_TOML"
 
 		# 11,12,13,14,15 (ports in config + client)
 		# sed -i '' 's/:26657/:56657/g' "$CONFIG"
-		sed -i '' 's/:26658/:56658/g' "$CONFIG"
-		sed -i '' 's/:6060/:16060/g' "$CONFIG"
-		sed -i '' 's/:26656/:56656/g' "$CONFIG"
-		sed -i '' 's/:26660/:56660/g' "$CONFIG"
+		# sed -i '' 's/:26658/:56658/g' "$CONFIG"
+		# sed -i '' 's/:6060/:16060/g' "$CONFIG"
+		# sed -i '' 's/:26656/:56656/g' "$CONFIG"
+		# sed -i '' 's/:26660/:56660/g' "$CONFIG"
 		# Also client
 		# sed -i '' 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
 
@@ -250,19 +250,19 @@ EOF
 		sed -i 's/^pruning = .*/pruning = "nothing"/' "$APP_TOML"
 
 		# 6,7,8,9,10,11 (ports in app)
-		sed -i 's/:1317/:11317/g' "$APP_TOML"
-		sed -i 's/:9090/:19090/g' "$APP_TOML"
-		sed -i 's/:8545/:18545/g' "$APP_TOML"
-		sed -i 's/:8546/:18546/g' "$APP_TOML"
-		sed -i 's/:6065/:16065/g' "$APP_TOML"
+		# sed -i 's/:1317/:11317/g' "$APP_TOML"
+		# sed -i 's/:9090/:19090/g' "$APP_TOML"
+		# sed -i 's/:8545/:18545/g' "$APP_TOML"
+		# sed -i 's/:8546/:18546/g' "$APP_TOML"
+		# sed -i 's/:6065/:16065/g' "$APP_TOML"
 		# sed -i 's/:26657/:56657/g' "$APP_TOML"
 
 		# 11,12,13,14,15 (ports in config + client)
 		# sed -i 's/:26657/:56657/g' "$CONFIG"
-		sed -i 's/:26658/:56658/g' "$CONFIG"
-		sed -i 's/:6060/:16060/g' "$CONFIG"
-		sed -i 's/:26656/:56656/g' "$CONFIG"
-		sed -i 's/:26660/:56660/g' "$CONFIG"
+		# sed -i 's/:26658/:56658/g' "$CONFIG"
+		# sed -i 's/:6060/:16060/g' "$CONFIG"
+		# sed -i 's/:26656/:56656/g' "$CONFIG"
+		# sed -i 's/:26660/:56660/g' "$CONFIG"
 		# Also client
 		# sed -i 's/:26657/:56657/g' "$HOMEDIR/config/client.toml" 2>/dev/null || true
 
@@ -294,11 +294,20 @@ EOF
 	fi
 fi
 
-# Start the node
-# aizeld start \
-# 	--metrics "$TRACE" \
-# 	--log_level $LOGLEVEL \
-# 	--minimum-gas-prices=0.0001$BASE_DENOM \
-# 	--json-rpc.api eth,txpool,personal,net,debug,web3 \
-# 	--home "$HOMEDIR" \
-# 	--chain-id "$CHAINID"
+# Change parameter token denominations to $BASE_DENOM
+jq --arg base_denom "$BASE_DENOM" '.app_state["staking"]["params"]["bond_denom"]=$base_denom' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+# Update gov deposit params: set denom and amount.
+jq --arg base_denom "$BASE_DENOM" \
+   '.app_state.gov.deposit_params.min_deposit[0] |= (.denom=$base_denom) + {amount:"1000000"}' \
+   "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+# When using gov.params (for v0.47 and later), update the deposit params:
+jq --arg base_denom "$BASE_DENOM" \
+   '.app_state.gov.params.min_deposit[0] |= (.denom=$base_denom) + {amount:"1000000"}' \
+   "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+# Also update the inflation mint denom:
+jq --arg base_denom "$BASE_DENOM" '.app_state["inflation"]["params"]["mint_denom"]=$base_denom' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
+

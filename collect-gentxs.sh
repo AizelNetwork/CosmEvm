@@ -28,6 +28,11 @@ TMP_GENESIS=$HOMEDIR/config/tmp_genesis.json
 # Collect genesis tx
 aizeld collect-gentxs --home "$HOMEDIR"
 
+# Update the fee parameters in genesis for all gen_txs.
+# jq --arg newGas "400000" \
+#    '(.app_state.genutil.gen_txs[]? | .auth_info.fee.gas_limit) = $newGas' \
+#    "$GENESIS" > "$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+
 # Run this to ensure everything worked and that the genesis file is setup correctly
 aizeld validate-genesis --home "$HOMEDIR"
 

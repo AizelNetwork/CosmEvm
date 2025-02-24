@@ -38,13 +38,20 @@ echo "Updating app.toml settings for node2..."
 sed -i.bak 's/name "node1"/name "node2"/g' "$APP_TOML"
 
 # 2. Update the ports in app.toml
-sed -i.bak 's/:11317/:11327/g' "$APP_TOML"
-sed -i.bak 's/:18545/:18555/g' "$APP_TOML"
-sed -i.bak 's/:18546/:18566/g' "$APP_TOML"
-sed -i.bak 's/:26657/:56667/g' "$APP_TOML"
-sed -i.bak 's/:56658/:56668/g' "$APP_TOML"
-sed -i.bak 's/:56656/:56666/g' "$APP_TOML"
-sed -i.bak 's/:16065/:16075/g' "$APP_TOML"
+# sed -i.bak 's/:11317/:11327/g' "$APP_TOML"
+# sed -i.bak 's/:18545/:18555/g' "$APP_TOML"
+# sed -i.bak 's/:18546/:18566/g' "$APP_TOML"
+# sed -i.bak 's/:56657/:56667/g' "$APP_TOML"
+# sed -i.bak 's/:56658/:56668/g' "$APP_TOML"
+# sed -i.bak 's/:56656/:56666/g' "$APP_TOML"
+# sed -i.bak 's/:16065/:16075/g' "$APP_TOML"
+sed -i.bak 's/:1317/:1327/g' "$APP_TOML"
+sed -i.bak 's/:8545/:8555/g' "$APP_TOML"
+sed -i.bak 's/:8546/:8566/g' "$APP_TOML"
+sed -i.bak 's/:26657/:26667/g' "$APP_TOML"
+sed -i.bak 's/:26658/:26668/g' "$APP_TOML"
+sed -i.bak 's/:26656/:26666/g' "$APP_TOML"
+sed -i.bak 's/:6065/:6075/g' "$APP_TOML"
 
 # 3. Change the pruning setting from "nothing" to "custom"
 sed -i.bak 's/pruning = "nothing"/pruning = "custom"/g' "$APP_TOML"
@@ -52,11 +59,19 @@ sed -i.bak 's/pruning = "nothing"/pruning = "custom"/g' "$APP_TOML"
 echo "Updating config.toml and client.toml settings for node2..."
 
 # Update ports in config.toml and client.toml
+# for file in "$CONFIG_TOML" "$CLIENT_TOML"; do
+#   sed -i.bak 's/:56656/:56666/g' "$file"
+#   sed -i.bak 's/:56657/:56667/g' "$file"
+#   sed -i.bak 's/:56658/:56668/g' "$file"
+#   sed -i.bak 's/:16060/:16070/g' "$file"
+# done
+
+# Update ports in config.toml and client.toml
 for file in "$CONFIG_TOML" "$CLIENT_TOML"; do
-  sed -i.bak 's/:56656/:56666/g' "$file"
-  sed -i.bak 's/:26657/:56667/g' "$file"
-  sed -i.bak 's/:56658/:56668/g' "$file"
-  sed -i.bak 's/:16060/:16070/g' "$file"
+  sed -i.bak 's/:26656/:26666/g' "$file"
+  sed -i.bak 's/:26657/:26667/g' "$file"
+  sed -i.bak 's/:26658/:26668/g' "$file"
+  sed -i.bak 's/:6060/:6070/g' "$file"
 done
 
 echo "Setting persistent_peers in node2's config.toml..."
@@ -79,6 +94,7 @@ echo "Signing genesis transaction for validator2 on node2..."
 
 # Sign a gentx for validator2 on node2.
 aizeld gentx "$VAL2_KEY" 1000000000000000000000$BASE_DENOM \
+  --gas 400000 \
   --gas-prices ${BASEFEE}$BASE_DENOM \
   --keyring-backend "$KEYRING" \
   --chain-id "$CHAINID" \
