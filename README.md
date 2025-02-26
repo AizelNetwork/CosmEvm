@@ -203,7 +203,7 @@ After the nodes have started, test your blockchain by retrieving the current blo
 curl -X POST \
   -H "Content-Type: application/json" \
   --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
-  http://localhost:18545
+  http://localhost:8545
 ```
 
 You should receive a JSON response with the block number (in hexadecimal).

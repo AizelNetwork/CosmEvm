@@ -2,7 +2,7 @@
 CHAINID="${CHAIN_ID:-aizel_2015-3333}"
 VAL1_KEY="validator1"
 # Submit Proposal
-aizeld query gov proposal 1 \
+aizeld query gov proposal 2 \
   --home "$AIZELHOME/node1" \
   --chain-id "$CHAINID" \
   --node "tcp://localhost:26657" \

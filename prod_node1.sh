@@ -144,7 +144,7 @@ EOF
 	jq '.app_state["feemarket"]["params"]["base_fee"]="'${BASEFEE}'"' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# CHANGED: Update evm.params.extra_eips to include "ethereum_5656"
-	jq '.app_state["evm"]["params"]["extra_eips"] = ["ethereum_3855"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
+	jq '.app_state["evm"]["params"]["extra_eips"] = ["ethereum_3855", "ethereum_5656"]' "$GENESIS" >"$TMP_GENESIS" && mv "$TMP_GENESIS" "$GENESIS"
 
 	# CHANGED: Set swagger = true in app.toml
 	sed -i.bak 's/swagger = false/swagger = true/g' "$APP_TOML"
