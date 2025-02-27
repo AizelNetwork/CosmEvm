@@ -85,7 +85,7 @@ echo "Node1 ID: ${BOOT_NODE_ID}"
 BOOT_NODE_IP="127.0.0.1"
 
 # Update the persistent_peers entry in node2's config.toml.
-sed -i.bak "s/^persistent_peers = .*/persistent_peers = \"${BOOT_NODE_ID}@${BOOT_NODE_IP}:56656\"/g" "$CONFIG_TOML"
+sed -i.bak "s/^persistent_peers = .*/persistent_peers = \"${BOOT_NODE_ID}@${BOOT_NODE_IP}:26656\"/g" "$CONFIG_TOML"
 
 echo "Removing existing gentx files from node2 config/gentx..."
 rm -f "$NODE2_HOME/config/gentx/"*.json
