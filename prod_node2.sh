@@ -6,7 +6,7 @@ set -e
 # For example, export them before running this script.
 CHAINID="${CHAIN_ID:-aizel_2015-3333}"
 BASE_DENOM="aaizel"
-MONIKER="node1"
+MONIKER="node2"
 KEYRING="file"
 KEYALGO="eth_secp256k1"
 LOGLEVEL="info"
@@ -20,8 +20,19 @@ NODE2_HOME="$AIZELHOME/node2"
 echo "Deleting node2 folder if it exists..."
 sudo rm -rf "$NODE2_HOME"
 
+echo "Initializing node2"
+aizeld init $MONIKER -o --chain-id "$CHAINID" --home "$NODE2_HOME"
+
+echo "Copy node_key and priv_validator_key"
+mv $NODE2_HOME/config/node_key.json $NODE2_HOME/config/node_key.json.bak
+mv $NODE2_HOME/config/priv_validator_key.json $NODE2_HOME/config/priv_validator_key.json.bak
+
 echo "Copying node1 folder to node2..."
-sudo cp -r "$NODE1_HOME" "$NODE2_HOME"
+sudo cp -r "$NODE1_HOME/"* "$NODE2_HOME"
+
+echo "Recover node_key and priv_validator_key"
+mv $NODE2_HOME/config/node_key.json.bak $NODE2_HOME/config/node_key.json
+mv $NODE2_HOME/config/priv_validator_key.json.bak $NODE2_HOME/config/priv_validator_key.json
 
 # Change ownership of the newly created node2 folder so your user can modify its files.
 echo "Changing ownership of node2 folder to the current user..."
@@ -35,7 +46,7 @@ CLIENT_TOML="$NODE2_HOME/config/client.toml"
 echo "Updating app.toml settings for node2..."
 
 # 1. Change the node name from "node1" to "node2"
-sed -i.bak 's/name "node1"/name "node2"/g' "$APP_TOML"
+sed -i.bak 's/node1/node2/g' "$CONFIG_TOML"
 
 # 2. Update the ports in app.toml
 # sed -i.bak 's/:11317/:11327/g' "$APP_TOML"
@@ -94,7 +105,6 @@ echo "Signing genesis transaction for validator2 on node2..."
 
 # Sign a gentx for validator2 on node2.
 aizeld gentx "$VAL2_KEY" 1000000000000000000000$BASE_DENOM \
-  --gas 400000 \
   --gas-prices ${BASEFEE}$BASE_DENOM \
   --keyring-backend "$KEYRING" \
   --chain-id "$CHAINID" \
